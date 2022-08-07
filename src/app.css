@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--back-color);
+}
+
+#cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 0 10px 0;
+}
