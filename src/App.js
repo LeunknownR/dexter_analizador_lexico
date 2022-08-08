@@ -7,7 +7,7 @@ import Header from "components/header/Header";
 import SubHeader from "components/subheader/SubHeader";
 import Footer from "components/footer/Footer";
 import Ornament from "components/general/ornament/Ornament";
-import Card from "components/card/Card";
+import Card from "components/card/card-template/CardTemplate";
 
 import Dexter from "img/DexterLogo.png";
 

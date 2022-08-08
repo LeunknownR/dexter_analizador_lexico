@@ -2,10 +2,15 @@ import { Container } from "./styles";
 
 import { Icon } from "@iconify/react";
 
-const CustomIcon = ({ icon }) => {
+const CustomIcon = ({ icon, color, backColor, size }) => {
     return (
-        <Container>
-            {icon && <Icon icon={icon} id="icon" />}
+        <Container color={color} backColor={backColor}>
+            {icon && (
+                <Icon
+                    id={size ? `${size}` : "icon"}
+                    icon={icon}
+                />
+            )}
         </Container>
     );
 };

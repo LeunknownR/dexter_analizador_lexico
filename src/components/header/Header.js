@@ -6,7 +6,7 @@ const Header = ({ title, icon }) => {
     return (
         <Container>
             <h1 className="custom-title">{title}</h1>
-            {icon && <CustomIcon icon={icon}/> }
+            {icon && <CustomIcon icon={icon} backColor="--third-color"/> }
         </Container>
     );
 };

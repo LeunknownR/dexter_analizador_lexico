@@ -21,6 +21,12 @@
     padding: 0;
     margin:0;
 }
+.custom-title-3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
 .custom-subtitle {
     font-size: 20px;
     margin: 0 0 5px 0;
@@ -33,4 +39,11 @@
     margin: 0;
     color: var(--secondary-back-color);
     font-weight: 400;
+}
+.custom-subtitle-3 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #9E9C9C;
+    padding: 0;
+    margin: 15px 0 0 0;
 }

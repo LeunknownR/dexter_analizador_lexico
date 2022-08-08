@@ -5,10 +5,13 @@ export const Container = styled.div`
     align-items: center;
     border-radius: 50%;
     padding: 8px;
-    background-color: var(--third-color);
-
+    background-color: ${({ backColor }) => (backColor ? `var(${backColor})` : null)};
     & #icon {
+        color: ${({ color }) => (color ? `var(${color})` : "#000000")};
         font-size: 35px;
+    }
+    & #XL {
+        font-size: 90px;
     }
 `;
 

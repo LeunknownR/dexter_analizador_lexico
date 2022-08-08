@@ -3,8 +3,8 @@ import { Container, Dot } from "./styles";
 const Ornament = ({colors}) => {
     return (
         <Container>
-            {colors && colors.map(color => {
-                return <Dot color={color}/>
+            {colors && colors.map((color, idx) => {
+                return <Dot key={idx} color={color}/>
             })}
         </Container>
     );
