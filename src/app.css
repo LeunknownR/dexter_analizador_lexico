@@ -8,5 +8,11 @@ main {
     display: flex;
     justify-content: center;
     gap: 50px;
-    padding: 0 0 10px 0;
+}
+#btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 0;
+    gap: 20px;
 }

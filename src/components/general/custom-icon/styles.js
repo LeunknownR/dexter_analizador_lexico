@@ -6,12 +6,15 @@ export const Container = styled.div`
     border-radius: 50%;
     padding: 8px;
     background-color: ${({ backColor }) => (backColor ? `var(${backColor})` : null)};
-    & #icon {
-        color: ${({ color }) => (color ? `var(${color})` : "#000000")};
+    color: ${({ color }) => (color ? `var(${color})` : "#000000")};
+    #icon {
         font-size: 35px;
     }
-    & #XL {
+    #XL {
         font-size: 90px;
+    }
+    #S {
+        font-size: 20px;
     }
 `;
 

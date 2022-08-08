@@ -1,4 +1,4 @@
-import { Container, InfoTabs, Tab, InfoBody, TextContainer } from "./styles";
+import { Container, InfoTabs, Tab, InfoBody } from "./styles";
 
 import CustomIcon from "components/general/custom-icon/CustomIcon";
 import NullCard from "../null-card/NullCard";

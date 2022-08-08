@@ -6,8 +6,6 @@ const NullCard = ({icon, title, subtitle}) => {
         <Container>
             <CustomIcon
                 icon={icon}
-                color="--secondary-color"
-                backColor="--secondary-back-color"
                 size="XL"
             />
             <hr />
