@@ -13,8 +13,8 @@ import Dexter from "img/DexterLogo.png";
 import CustomBtn from "components/general/custom-btn/CustomBtn";
 
 const App = () => {
-    // const componentList = lexicAnalyzer("var1 + 3 _ ; 2 3 xcasadasdsa_sads");
-    // console.log(componentList);
+    const componentList = lexicAnalyzer("if var1+ifIcould");
+    console.log(componentList);
     return (
         <>
             <Header title="DEXTER" icon="fluent:people-team-32-filled" />
