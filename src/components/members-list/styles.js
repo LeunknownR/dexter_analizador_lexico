@@ -2,18 +2,16 @@ import styled from "styled-components";
 import { keyframes } from "styled-components";
 
 const unfold = keyframes`
- /* from { clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0); } */
- /* to   { clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0); } */
  from { clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%); }
   to   { clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%); }
 `;
 
-const fold = keyframes`
- /* from { clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0); } */
- /* to   { clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0); } */
- from { visibility: visible; clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%); }
-  to   { clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%); visibility: hidden }
-`;
+// const fold =
+//  /* from { clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0); } */
+//  /* to   { clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0); } */
+//  from { visibility: hidden; clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%); }
+//   to   { clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%); visibility: hidden }
+// `;
 
 export const Container = styled.section`
     display: flex;
@@ -27,18 +25,22 @@ export const Container = styled.section`
     right: 225px;
     top: 80px;
     visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
     h5 {
         font-weight: 700;
     }
     &.active {
         visibility: visible;
+        opacity: 1;
         animation-name: ${unfold};
         animation-duration: 0.6s;
     }
-    &.inactive {
-        animation-name: ${fold};
+    /* &.inactive {
+        visibility: hidden;
+        animation-name: ;
         animation-duration: 0.6s;
-    }
+    } */
 `;
 export const CardsContainer = styled.article`
     display: flex;
