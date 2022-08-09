@@ -31,6 +31,5 @@ export const DIAGRAM_TRANSITION = {
     [STATES.OPERATOR]: {},
     [STATES.EOF]: {},
     [STATES.START_PAREN]: {},
-    [STATES.END_PAREN]: {},
-    [STATES.RESERVED_WORD]: {}
+    [STATES.END_PAREN]: {}
 };

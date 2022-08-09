@@ -1,7 +1,7 @@
 import "./customize.css";
 import "./app.css";
 
-// import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
+import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
 
 import Header from "components/header/Header";
 import SubHeader from "components/subheader/SubHeader";
@@ -12,9 +12,8 @@ import Card from "components/card/card-template/CardTemplate";
 import Dexter from "img/DexterLogo.png";
 import CustomBtn from "components/general/custom-btn/CustomBtn";
 
+lexicAnalyzer("if var1+ifIcould   forof for", true);
 const App = () => {
-    const componentList = lexicAnalyzer("if var1+ifIcould");
-    console.log(componentList);
     return (
         <>
             <Header title="DEXTER" icon="fluent:people-team-32-filled" />
