@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--back-color);
+}
+
+#cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+#btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 0;
+    gap: 20px;
+}

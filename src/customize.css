@@ -1,0 +1,51 @@
+:root {
+    --primary-color: #161A1D;
+    --secondary-color: #6F2DBD;
+    --third-color: #FFCF33;
+    --fourth-color: #EDF2F4;
+    --fifth-color: #E9ECEF;
+    --back-color: #F7F6F7;
+    --secondary-back-color: #FFFFFF;
+    --black-xd: #000000;
+    --barely-used-gray: #7E7E7E;
+
+}
+.custom-title {
+    font-size: 30px;
+    padding: 0;
+    margin:0;
+    color: var(--back-color);
+}
+.custom-title-2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding: 0;
+    margin:0;
+}
+.custom-title-3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.custom-subtitle {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+    padding: 0;
+    color: #434343;
+}
+.custom-subtitle-2 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    color: var(--secondary-back-color);
+    font-weight: 400;
+}
+.custom-subtitle-3 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #9E9C9C;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
