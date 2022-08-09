@@ -1,7 +1,7 @@
 import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
 
 const App = () => {
-    const componentList = lexicAnalyzer("var1 + 3 _ ; 2 3 xcasadasdsa_sads");
+    const componentList = lexicAnalyzer("if var1+ifIcould");
     console.log(componentList);
     return (
         <>

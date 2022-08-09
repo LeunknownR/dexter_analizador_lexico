@@ -1,14 +1,11 @@
-const { STATES } = require("./states");
+import { STATES } from "./states";
 
-const TOKEN_DICTIONARY = {
+export const TOKEN_DICTIONARY = {
     [STATES.IDENTIFIER]: "Identificador",
     [STATES.INTEGER]: "Entero",
     [STATES.OPERATOR]: "Operador",
     [STATES.START_PAREN]: "Paréntesis de apertura",
     [STATES.END_PAREN]: "Paréntesis de cierre",
-    [STATES.EOF]: "Cierre de sentencia"
-};
-
-module.exports = {
-    TOKEN_DICTIONARY
+    [STATES.EOF]: "Cierre de sentencia",
+    [STATES.RESERVED_WORD]: "Palabra reservada"
 };

@@ -1,8 +1,9 @@
-import { TRANSITION_DIAGRAM } from "./transitionDiagram";
-import { TOKEN_DICTIONARY } from "./stateToToken";
-import { CHARACTER_LIST } from "./characters";
-import { STATES } from "./states";
-import { RecognizerValuesRange } from "../utils/valuesRange";
+import { DIAGRAM_TRANSITION } from "./constants/diagramTransition";
+import { TOKEN_DICTIONARY } from "./constants/stateToToken";
+import { CHARACTER_LIST } from "./constants/characters";
+import { RecognizerValuesRange } from "./utils/valuesRange";
+import { STATES } from "./constants/states";
+import { isReservedWord } from "./constants/reservedWords";
 
 const lexicAnalyzer = (input, debugging = false) => {
     const componentList = [], debugBag = [];
@@ -13,11 +14,24 @@ const lexicAnalyzer = (input, debugging = false) => {
             key: "",
             name: ""
         };
+    console.log(`Entrada: ${input}`);
+    const checkIsReservedWord = newComponent => {
+        if (currentState === STATES.IDENTIFIER || isReservedWord(currentLexeme))
+        {
+            newComponent.token = {
+                key: STATES.RESERVED_WORD,
+                name: TOKEN_DICTIONARY[STATES.RESERVED_WORD]
+            };
+            newComponent.lexeme = currentLexeme;
+        }
+    }
     const addToComponentList = () => {
-        componentList.push({
+        let newComponent = {
             token: currentToken,
             lexeme: currentLexeme
-        });
+        };
+        checkIsReservedWord(newComponent);
+        componentList.push(newComponent);
         debugBag.push("**********");
         // Limpiando
         currentState = "start";
@@ -39,18 +53,17 @@ const lexicAnalyzer = (input, debugging = false) => {
             if (!currentChar) 
                 throw new Error("** Error léxico **\n");
         }
-        debugBag.push(`* ${ch} ${currentState} && ${currentChar} = ${TRANSITION_DIAGRAM[currentState][currentChar]}`);
-        if (currentState === STATES.START && currentChar === CHARACTER_LIST.WHITE_SPACE) {
+        debugBag.push(`* ${ch} ${currentState} && ${currentChar} = ${DIAGRAM_TRANSITION[currentState][currentChar]}`);
+        if (currentState === STATES.START && currentChar === CHARACTER_LIST.WHITE_SPACE) 
             return;
-        }
-        currentState = TRANSITION_DIAGRAM[currentState][currentChar];
+        currentState = DIAGRAM_TRANSITION[currentState][currentChar];
         // Verificando si hay error
         if (currentState) {
+            currentLexeme += ch;
             currentToken = {
                 key: currentState,
                 name: TOKEN_DICTIONARY[currentState]
             };
-            currentLexeme += ch;
             if (idx === length - 1) 
                 addToComponentList();
             return;
@@ -59,7 +72,6 @@ const lexicAnalyzer = (input, debugging = false) => {
         if (ch !== CHARACTER_LIST.WHITE_SPACE && iterate) 
             iterator(ch, idx, length, false);
     };
-    console.log(`Entrada: ${input}`);
     inputCharacters.forEach((ch, idx, { length }) => iterator(ch, idx, length));
     if (debugging) {
         console.table(componentList);
