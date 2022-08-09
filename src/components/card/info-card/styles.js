@@ -25,6 +25,7 @@ export const Tab = styled.div`
     border-radius: 10px 10px 0 0;
     padding: 0 5px;
     width: 23%;
+    user-select: none;
     cursor: pointer;
     h5 {
         color: #A4A4A4;

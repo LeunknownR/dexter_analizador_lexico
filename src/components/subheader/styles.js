@@ -6,6 +6,10 @@ export const Container = styled.header`
     align-items: center;
     padding: 8px 200px;
     background-color: var(--back-color-2);
+    img {
+        user-select: none;
+        -webkit-user-drag: none;
+    }
 `;
 export const TitleContainer = styled.div`
 `;

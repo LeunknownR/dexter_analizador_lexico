@@ -15,5 +15,6 @@ export const Container = styled.button`
     gap: 15px;
     font-size: 18px;
     font-weight: 700;
+    user-select: none;
 `;
 

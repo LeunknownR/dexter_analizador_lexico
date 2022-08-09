@@ -13,6 +13,9 @@ export const Container = styled.div`
     #XL {
         font-size: 90px;
     }
+    #M {
+        font-size: 35px;
+    }
     #S {
         font-size: 20px;
     }
