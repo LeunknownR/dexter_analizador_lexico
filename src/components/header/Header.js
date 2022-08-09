@@ -18,7 +18,7 @@ const Header = ({ title, icon }) => {
     const [isShown, setIsShown] = useState(false);
 
     return (
-        <Container>
+        <Container className="standard-padd-mar">
             <h1 className="custom-title">{title}</h1>
             {icon && (
                 <span

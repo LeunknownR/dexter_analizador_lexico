@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.article`
+export const Container = styled.div`
     padding: 30px 200px;
     display: flex;
     gap: 20px;

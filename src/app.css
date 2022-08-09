@@ -3,12 +3,22 @@ main {
     flex-direction: column;
     background-color: var(--back-color);
 }
-
+@media (min-height: 1081px) {
+    main {
+        min-height: 92.4vh;
+        justify-content: center;
+    }
+}
 #cards-container {
     display: flex;
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
+}
+@media (max-width: 1700px) {
+    #cards-container {
+        padding-bottom: 50px;
+    }
 }
 #btn-container {
     display: flex;
@@ -16,4 +26,18 @@ main {
     align-items: center;
     padding: 23px 0;
     gap: 20px;
+}
+
+.standard-padd-mar {
+    padding: 20px 200px;
+}
+@media (max-width: 1100px) {
+    .standard-padd-mar {
+        padding: 20px 130px;
+    }
+}
+@media (max-width: 800px) {
+    .standard-padd-mar {
+        padding: 20px 40px;
+    }
 }

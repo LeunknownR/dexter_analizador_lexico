@@ -2,7 +2,7 @@ import { Container, TitleContainer } from "./styles";
 
 const SubHeader = ({ title, subtitle, img }) => {
     return (
-        <Container>
+        <Container className="standard-padd-mar">
             <TitleContainer>
                 {subtitle && <h4 className="custom-subtitle">{subtitle}</h4>}
                 <h2 className="custom-title-2">{title}</h2>

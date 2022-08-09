@@ -32,7 +32,7 @@ const App = () => {
                     ]}
                 />
                 <section id="cards-container">
-                    <div>
+                    <article>
                         <Card cardName="Expresión a analizar" type="analyze" />
                         <div id="btn-container">
                             <CustomBtn
@@ -48,7 +48,7 @@ const App = () => {
                                 backColor="--secondary-back-color"
                             />
                         </div>
-                    </div>
+                    </article>
                     <Card cardName="Resultados" type="result" />
                     <Card cardName="Más información" type="info" />
                 </section>
