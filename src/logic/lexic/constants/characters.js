@@ -1,4 +1,4 @@
-const CHARACTER_LIST = {
+export const CHARACTER_LIST = {
     LETTER: "letter",
     DIGIT: "digit",
     ASTERISK: "*",
@@ -12,9 +12,6 @@ const CHARACTER_LIST = {
     END_PAREN: ")",
     START_BRACKET: "[",
     END_BRACKET: "]",
-    SEMICOLON: ";"
-};
-
-module.exports = {
-    CHARACTER_LIST
+    SEMICOLON: ";",
+    LINE_BREAK: "\n"
 };

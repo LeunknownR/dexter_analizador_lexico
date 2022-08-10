@@ -1,13 +1,16 @@
 import { DIAGRAM_TRANSITION } from "./constants/diagramTransition";
-import { TOKEN_DICTIONARY } from "./constants/stateToToken";
+import { TOKEN_DICTIONARY } from "./constants/dictionary";
 import { CHARACTER_LIST } from "./constants/characters";
 import { RecognizerValuesRange } from "./utils/valuesRange";
 import { STATES } from "./constants/states";
 import { isReservedWord } from "./constants/reservedWords";
 
+const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
+
 const lexicAnalyzer = (input, debugging = false) => {
     // Convirtiando la entrada a un array de caracteres
     const inputCharacters = input.split("");
+    console.log({ a: input });
     //#region Variables necesarias para el análisis
     const componentList = [], debugLog = [];
     let currentState = "start", 
@@ -23,6 +26,7 @@ const lexicAnalyzer = (input, debugging = false) => {
         // Verificando si no cumple con ser una palabra reservada
         if (![STATES.IDENTIFIER, undefined].includes(currentState) 
             || !isReservedWord(currentLexeme)) return;
+        debugLog.push(`* ${currentLexeme.split("").pop()} ${currentState} && ${currentChar} = ${STATES.RESERVED_WORD}`);
         // Setteando valores de ser una palabra reservada
         newComponent.token = {
             key: STATES.RESERVED_WORD,
@@ -59,7 +63,7 @@ const lexicAnalyzer = (input, debugging = false) => {
                 throw new Error("** Error léxico **\n");
         }
         // Salteando espacio en blanco si está en el estado "start"
-        if (currentState === STATES.START && currentChar === CHARACTER_LIST.WHITE_SPACE) 
+        if (currentState === STATES.START && ignoreCharacters(currentChar)) 
             return;
         // Obteniendo nuevo estado
         const newState = DIAGRAM_TRANSITION[currentState][currentChar];
@@ -82,7 +86,7 @@ const lexicAnalyzer = (input, debugging = false) => {
         // Hay estado de error
         addToComponentList();
         // Revisando si no es un espacio en blanco para iterar una vez más
-        if (ch !== CHARACTER_LIST.WHITE_SPACE && iterate) 
+        if (!ignoreCharacters(ch) && iterate) 
             iterator(ch, idx, length, false);
     };
     //#endregion
@@ -91,7 +95,7 @@ const lexicAnalyzer = (input, debugging = false) => {
     // Mostrando registro de depuración y lista de componentes léxicos obtenidos al final del análisis
     if (debugging) {
         console.table(debugLog);
-        console.table(componentList);
+        console.log(componentList);
     }
     return componentList;
 }
