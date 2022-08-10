@@ -3,7 +3,9 @@ import { Container, TextArea } from "./styles";
 const ExpressionCard = () => {
     return (
         <Container>
-            <TextArea placeholder="Escribir aquí..."/>
+            <code>
+                <TextArea placeholder="Escribir aquí..." spellCheck="false"/>
+            </code>
         </Container>
     );
 };

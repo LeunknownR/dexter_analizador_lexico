@@ -4,6 +4,10 @@ export const Container = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 200px;
     background-color: var(--primary-color);
+    h3 {
+        @media (max-width: 1899px){
+            font-size: 15px;
+        }
+    }
 `;
