@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.header`
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+`;
+export const Content = styled.div`
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 8px;
@@ -13,4 +18,5 @@ export const Container = styled.header`
     }
 `;
 export const TitleContainer = styled.div`
+    
 `;

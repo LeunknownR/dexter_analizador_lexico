@@ -14,6 +14,7 @@ const unfold = keyframes`
 // `;
 
 export const Container = styled.section`
+    display: flex;
     flex-direction: column;
     background-color: #00000099;
     width: 350px;
@@ -23,14 +24,14 @@ export const Container = styled.section`
     position: absolute;
     right: 225px;
     top: 70px;
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transition: 0.4s;
     h5 {
         font-weight: 700;
     }
     &.active {
-        display: flex;
+        visibility: visible;
         opacity: 1;
         animation-name: ${unfold};
         animation-duration: 0.6s;

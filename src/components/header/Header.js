@@ -22,8 +22,8 @@ const Header = ({ title, icon }) => {
             <h1 className="custom-title">{title}</h1>
             {icon && (
                 <span
-                    onMouseOver={() => setIsShown(true)}
-                    onMouseOut={() => setIsShown(false)}
+                    onMouseEnter={() => setIsShown(true)}
+                    onMouseLeave={() => setIsShown(false)}
                 >
                     <CustomIcon icon={icon} backColor="--third-color" />
                 </span>

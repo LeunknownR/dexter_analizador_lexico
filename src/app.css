@@ -9,24 +9,8 @@ main {
         justify-content: center;
     }
 }
-#cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-@media (max-width: 1700px) {
-    #cards-container {
-        padding-bottom: 50px;
-    }
-}
-#btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 23px 0;
-    gap: 20px;
-}
+
+/* WARNING: USEFUL class below!!!!!!!!! */
 
 .standard-padd-mar {
     padding: 20px 200px;

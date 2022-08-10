@@ -5,5 +5,9 @@ export const Container = styled.footer`
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
-    
+    h3 {
+        @media (max-width: 1899px){
+            font-size: 15px;
+        }
+    }
 `;
