@@ -23,7 +23,7 @@ export const Container = styled.section`
     border-radius: 15px;
     position: absolute;
     right: 225px;
-    top: 80px;
+    top: 70px;
     visibility: hidden;
     opacity: 0;
     transition: 0.4s;

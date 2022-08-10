@@ -18,12 +18,12 @@ const Header = ({ title, icon }) => {
     const [isShown, setIsShown] = useState(false);
 
     return (
-        <Container>
+        <Container className="standard-padd-mar">
             <h1 className="custom-title">{title}</h1>
             {icon && (
                 <span
-                    onMouseOver={() => setIsShown(true)}
-                    onMouseOut={() => setIsShown(false)}
+                    onMouseEnter={() => setIsShown(true)}
+                    onMouseLeave={() => setIsShown(false)}
                 >
                     <CustomIcon icon={icon} backColor="--third-color" />
                 </span>

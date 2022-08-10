@@ -4,7 +4,7 @@ import CustomIcon from "components/general/custom-icon/CustomIcon";
 
 const MembersList = ({ names, isShown }) => {
     return (
-        <Container className={isShown ? "active" : "inactive"}>
+        <Container className={isShown ? "active" : null}>
             <h5 className="custom-subtitle-2">MIEMBROS</h5>
             <CardsContainer>
                 {names.map((name, idx) => {

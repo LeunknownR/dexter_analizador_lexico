@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.article`
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 450px;
     background-color: #FFFFFF;
     border-radius: 20px;
     box-shadow: 0 2px #000000;
@@ -29,7 +29,7 @@ export const HeaderCard = styled.header`
 export const CardTitle = styled.h3`
     font-size: 18px;
     color: var(--secondary-back-color);
-    font-weight: 700;
+    font-weight: 500;
     padding: 10px 0;
     margin: 0;
 `;
