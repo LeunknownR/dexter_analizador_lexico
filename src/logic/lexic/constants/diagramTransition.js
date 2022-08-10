@@ -1,15 +1,14 @@
-import { CHARACTER_LIST } from "./characters";
 import { STATES } from "./states";
+import { CHARACTER_LIST } from "./characters";
 /*
-             |    letra       |digito       |     _           | *
+             |    letra       |digito       |     _
 ---------------------------------------------------------------
-inicio       |  identificador |    entero     | identificador 
+inicio       |  identificador |    entero     | identificador
 identificador|  identificador | identificador | identificador
 entero       |  identificador |    entero     | error
 */
 
-
-export const TRANSITION_DIAGRAM = {
+export const DIAGRAM_TRANSITION = {
     [STATES.START]: {
         [CHARACTER_LIST.LETTER]: STATES.IDENTIFIER,
         [CHARACTER_LIST.UNDERSCORE]: STATES.IDENTIFIER,
@@ -22,7 +21,7 @@ export const TRANSITION_DIAGRAM = {
         [CHARACTER_LIST.END_PAREN]: STATES.END_PAREN
     },
     [STATES.INTEGER]: {
-        [CHARACTER_LIST.DIGIT]: STATES.INTEGER
+        [CHARACTER_LIST.DIGIT]: STATES.INTEGER,
     },
     [STATES.IDENTIFIER]: {
         [CHARACTER_LIST.LETTER]: STATES.IDENTIFIER,

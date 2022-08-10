@@ -5,7 +5,8 @@ const STATES = {
     OPERATOR: "operator",
     START_PAREN: "startParen",
     END_PAREN: "endParen",
-    EOF: "end"
+    EOF: "end",
+    RESERVED_WORD: "reservedWord"
 };
 
 module.exports = {

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./customize.css";
 import "./app.css";
 
-// import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
+import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
 
 import Header from "components/header/Header";
 import SubHeader from "components/subheader/SubHeader";
@@ -12,11 +12,8 @@ import Cards from "components/card/Cards";
 
 import Dexter from "img/DexterLogo.png";
 
+lexicAnalyzer("if var1+ifIcould   forof for", true);
 const App = () => {
-    // const componentList = lexicAnalyzer("var1 + 3 _ ; 2 3 xcasadasdsa_sads");
-    // console.log(componentList);
-    // const [lexicComponents, setLexicComponents] = useState({})
-    // const [debugLog, setDebugLog] = useState({})
     return (
         <>
             <Header title="DEXTER" icon="fluent:people-team-32-filled" />
