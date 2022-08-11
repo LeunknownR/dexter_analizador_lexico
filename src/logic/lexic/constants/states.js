@@ -6,5 +6,6 @@ export const STATES = {
     START_PAREN: "startParen",
     END_PAREN: "endParen",
     EOF: "end",
-    RESERVED_WORD: "reservedWord"
+    RESERVED_WORD: "reservedWord",
+    ERROR: "error"
 };

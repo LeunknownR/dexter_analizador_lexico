@@ -5,7 +5,7 @@ import { RecognizerValuesRange } from "./utils/valuesRange";
 import { STATES } from "./constants/states";
 import { isReservedWord } from "./constants/reservedWords";
 
-const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
+const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE].includes(ch);
 
 const lexicAnalyzer = input => {
     // Convirtiando la entrada a un array de caracteres
@@ -64,9 +64,12 @@ const lexicAnalyzer = input => {
     }
     const addToDebugLog = (ch, newState) => {
         let newLog = {
-            state: currentState || "error",
-            char: { group: ch === currentChar ? null : currentChar, value: ch },
-            newState: newState || "error"
+            state: currentState || STATES.ERROR,
+            char: { 
+                group: ch === currentChar ? null : currentChar, 
+                value: ch 
+            },
+            newState: newState || STATES.ERROR
         };
         if (currentState === STATES.START) {
             debugLog.push({
@@ -75,6 +78,12 @@ const lexicAnalyzer = input => {
             return;
         }
         debugLog[debugLog.length - 1].operations.push(newLog);
+    }
+    const lexicError = ch => {
+        const unknownLexeme = `${componentList[componentList.length - 1].lexeme}${ch}`;
+        throw {
+            message: `** Error léxico <| Lexema: ${unknownLexeme} |> **` 
+        };
     }
     const iterator = (ch, idx, length, iterate = true) => {
         if (ch === "\r")
@@ -89,8 +98,10 @@ const lexicAnalyzer = input => {
             // Verificando si el caracter se encuentra en la lista de caracteres admitidos, sino null
             currentChar = Object.values(CHARACTER_LIST).some(CH => CH === ch) ? ch : null;
             // Lanzando error en caso de no estar permitido
+            if (currentState === STATES.START && ch === CHARACTER_LIST.LINE_BREAK)
+                lexicError(ch)
             if (!currentChar) 
-                throw new Error("** Error léxico **\n");
+                lexicError(ch)
         }
         // Salteando espacio en blanco si está en el estado "start"
         if (currentState === STATES.START && ignoreCharacters(currentChar)) 
