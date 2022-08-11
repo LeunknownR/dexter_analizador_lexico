@@ -2,7 +2,7 @@ const { default: lexicAnalyzer } = require("logic/lexic/lexicAnalyzer");
 
 const test = () => {
     try {
-        lexicAnalyzer(`
+        lexicAnalyzer(`ssd  
         if+asdsa ofascxc( 23   `, true);
     }
     catch (err) {
