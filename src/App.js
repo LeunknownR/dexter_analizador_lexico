@@ -10,7 +10,6 @@ import Dexter from "img/DexterLogo.png";
 import test from "logic/utils/test";
 
 test();
-
 const App = () => {
     return (
         <>
