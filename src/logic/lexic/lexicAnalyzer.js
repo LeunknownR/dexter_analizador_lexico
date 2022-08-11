@@ -7,10 +7,9 @@ import { isReservedWord } from "./constants/reservedWords";
 
 const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
 
-const lexicAnalyzer = (input, debugging = false) => {
+const lexicAnalyzer = input => {
     // Convirtiando la entrada a un array de caracteres
     const inputCharacters = input.split("");
-    console.log({ a: input });
     //#region Variables necesarias para el análisis
     const componentList = [], debugLog = [];
     let currentState = "start", 
@@ -26,25 +25,56 @@ const lexicAnalyzer = (input, debugging = false) => {
         // Verificando si no cumple con ser una palabra reservada
         if (![STATES.IDENTIFIER, undefined].includes(currentState) 
             || !isReservedWord(currentLexeme)) return;
-        debugLog.push(`* ${currentLexeme.split("").pop()} ${currentState} && ${currentChar} = ${STATES.RESERVED_WORD}`);
+        // Reportando componente encontrado
+        const tokenName = TOKEN_DICTIONARY[STATES.RESERVED_WORD];
+        addTitleToDebugLog({
+            lexeme: currentLexeme,
+            token: tokenName
+        }, true);
         // Setteando valores de ser una palabra reservada
         newComponent.token = {
             key: STATES.RESERVED_WORD,
-            name: TOKEN_DICTIONARY[STATES.RESERVED_WORD]
+            name: tokenName
         };
         newComponent.lexeme = currentLexeme;
+    }
+    const addTitleToDebugLog = (title, isReservedWord = false) => {
+        // Reportando componente encontrado
+        debugLog[debugLog.length - 1] = {
+            ...debugLog[debugLog.length-1],
+            title,
+            isReservedWord
+        };
     }
     const addToComponentList = () => {
         const newComponent = {
             token: currentToken,
             lexeme: currentLexeme
         };
+        // Reportando componente encontrado
+        addTitleToDebugLog({
+            lexeme: currentLexeme,
+            token: currentToken.name
+        });
         checkIsReservedWord(newComponent);
         componentList.push(newComponent);
-        debugLog.push("**********");
         // Limpiando
         currentState = "start";
         currentLexeme = "";
+    }
+    const addToDebugLog = (ch, newState) => {
+        let newLog = {
+            state: currentState || "error",
+            char: { group: ch === currentChar ? null : currentChar, value: ch },
+            newState: newState || "error"
+        };
+        if (currentState === STATES.START) {
+            debugLog.push({
+                operations: [newLog]
+            });
+            return;
+        }
+        debugLog[debugLog.length - 1].operations.push(newLog);
     }
     const iterator = (ch, idx, length, iterate = true) => {
         if (ch === "\r")
@@ -68,9 +98,9 @@ const lexicAnalyzer = (input, debugging = false) => {
         // Obteniendo nuevo estado
         const newState = DIAGRAM_TRANSITION[currentState][currentChar];
         // Agregando al registro de depuración
-        debugLog.push(`* ${ch} ${currentState} && ${currentChar} = ${newState}`);
+        addToDebugLog(ch, newState)
         // Actualizando estado actual
-        currentState = DIAGRAM_TRANSITION[currentState][currentChar];
+        currentState = newState;
         // Verificando si la operación ha retornado un estado
         if (currentState) {
             currentLexeme += ch;
@@ -92,12 +122,7 @@ const lexicAnalyzer = (input, debugging = false) => {
     //#endregion
     // Recorriendo array de caracteres
     inputCharacters.forEach((ch, idx, { length }) => iterator(ch, idx, length));
-    // Mostrando registro de depuración y lista de componentes léxicos obtenidos al final del análisis
-    if (debugging) {
-        console.table(debugLog);
-        console.log(componentList);
-    }
-    return componentList;
+    return [componentList, debugLog];
 }
 
 export default lexicAnalyzer;
