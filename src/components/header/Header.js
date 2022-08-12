@@ -9,7 +9,7 @@ const membersNames = [
     "Ccaico Gonzales Joseph Joel",
     "Rivera Becerra Manuel Alejandro",
     "Carrasco Stein Ralf Carsten",
-    "Soto Ccachahua Juan Maycol",
+    "Soto Ccaccachahua Juan Maycol",
     "Dulanto Arias Alexis Valentín",
     "Almeyda Mateo Gianella Thalía"
 ];
