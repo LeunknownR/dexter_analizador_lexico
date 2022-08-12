@@ -13,5 +13,8 @@ export const CHARACTER_LIST = {
     START_BRACKET: "[",
     END_BRACKET: "]",
     SEMICOLON: ";",
+    AMPERSAND: "&",
+    VERTICAL_BAR: "|",
+    UTROPSTECKEN: "!",
     LINE_BREAK: "\n"
 };
