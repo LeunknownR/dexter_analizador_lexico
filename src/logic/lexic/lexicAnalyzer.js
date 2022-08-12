@@ -1,7 +1,7 @@
 import { DIAGRAM_TRANSITION } from "./constants/diagramTransition";
 import { TOKEN_DICTIONARY } from "./constants/dictionary";
 import { CHARACTER_LIST } from "./constants/characters";
-import { RecognizerValuesRange } from "./utils/valuesRange";
+import { RecognizerValuesRange } from "./valuesRange";
 import { STATES } from "./constants/states";
 import { isReservedWord } from "./constants/reservedWords";
 
