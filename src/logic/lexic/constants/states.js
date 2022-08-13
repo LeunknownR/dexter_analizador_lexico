@@ -3,6 +3,8 @@ export const STATES = {
     INTEGER: "integer",
     IDENTIFIER: "identifier",
     OPERATOR_PLUS: "operatorPlus",
+    OPERATOR_DIVISION: "operatorDivision",
+    OPERATOR_PRODUCT: "operatorProduct",
     START_PAREN: "startParen",
     OPERATOR_CONJ_1: "operatorConj1",
     OPERATOR_CONJ_F: "operatorConjF",

@@ -10,9 +10,9 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 # OPERADORES DE ARITMÉTICOS (6 componentes)
 
-* Operador suma: + [x]
-* Operador división: /
-* Operador producto: *
+* Operador suma: +                      [x]
+* Operador división: /                  [x]
+* Operador producto: *                  [x]
 ### Persona 1
 
 * Operador módulo: %
