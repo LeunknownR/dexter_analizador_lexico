@@ -22,8 +22,8 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 # OPERADORES LÓGICOS (3 componentes)
 
-* Operador de conjunción: &&
-* Operador de disyunción: ||
+* Operador de conjunción: && [x]
+* Operador de disyunción: || [x]
 * Operador de negación: !
 ### Persona 3
 
