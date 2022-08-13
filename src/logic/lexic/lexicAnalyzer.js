@@ -1,5 +1,5 @@
 import { DIAGRAM_TRANSITION } from "./constants/diagramTransition";
-import { TOKEN_DICTIONARY } from "./constants/dictionary";
+import { isToken, TOKEN_DICTIONARY } from "./constants/dictionary";
 import { CHARACTER_LIST } from "./constants/characters";
 import { RecognizerValuesRange } from "./valuesRange";
 import { STATES } from "./constants/states";
@@ -53,8 +53,8 @@ const lexicAnalyzer = input => {
         };
         // Reportando componente encontrado
         addTitleToDebugLog({
-            lexeme: currentLexeme,
-            token: currentToken.name
+            ...newComponent,
+            token: newComponent.token.name
         });
         checkIsReservedWord(newComponent);
         componentList.push(newComponent);
@@ -79,10 +79,9 @@ const lexicAnalyzer = input => {
         }
         debugLog[debugLog.length - 1].operations.push(newLog);
     }
-    const lexicError = ch => {
-        const unknownLexeme = `${componentList[componentList.length - 1].lexeme}${ch}`;
+    const lexicError = (ch = "") => {
         throw {
-            message: `** Error léxico <| Lexema: ${unknownLexeme} |> **` 
+            message: `** Error léxico <| Expresión o caracter desconocido: ${currentLexeme}${ch} |> **` 
         };
     }
     const iterator = (ch, idx, length, iterate = true) => {
@@ -98,10 +97,8 @@ const lexicAnalyzer = input => {
             // Verificando si el caracter se encuentra en la lista de caracteres admitidos, sino null
             currentChar = Object.values(CHARACTER_LIST).some(CH => CH === ch) ? ch : null;
             // Lanzando error en caso de no estar permitido
-            if (currentState === STATES.START && ch === CHARACTER_LIST.LINE_BREAK)
-                lexicError(ch)
             if (!currentChar) 
-                lexicError(ch)
+                lexicError()
         }
         // Salteando espacio en blanco si está en el estado "start"
         if (currentState === STATES.START && ignoreCharacters(currentChar)) 
@@ -110,6 +107,9 @@ const lexicAnalyzer = input => {
         const newState = DIAGRAM_TRANSITION[currentState][currentChar];
         // Agregando al registro de depuración
         addToDebugLog(ch, newState)
+        // Lanzando un error léxico si el estado inicial y el caracter actual no retorna un nuevo estado
+        if (currentState === STATES.START && !newState)
+            lexicError(ch);
         // Actualizando estado actual
         currentState = newState;
         // Verificando si la operación ha retornado un estado
@@ -120,12 +120,17 @@ const lexicAnalyzer = input => {
                 name: TOKEN_DICTIONARY[currentState]
             };
             // Recogiendo último componente antes de que el análisis finalice
-            if (idx === length - 1) 
-                addToComponentList();
+            if (idx < length - 1) return; 
+            if (!isToken(currentToken.key)) 
+                lexicError();
+            addToComponentList();
             return;
         }
+        // Lanzando error léxico si el último estado no pertenece a un token
+        if (!isToken(currentToken.key)) 
+            lexicError();
         // Hay estado de error
-        addToComponentList();
+        addToComponentList(ch);
         // Revisando si no es un espacio en blanco para iterar una vez más
         if (!ignoreCharacters(ch) && iterate) 
             iterator(ch, idx, length, false);
