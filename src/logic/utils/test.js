@@ -6,8 +6,7 @@ const test = () => {
     try {
         const [componentList, debugLog] = lexicAnalyzer(`ssd if+asdsa ofascxc( 23   `);
         console.log(debugLog);
-    }
-    catch (err) {
+    } catch (err) {
         console.log(err);
     }
 }
