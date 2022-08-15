@@ -1,4 +1,4 @@
-import { DIAGRAM_TRANSITION } from "./constants/diagramTransition";
+import { TRANSITION_DIAGRAM } from "./constants/transitionDiagram";
 import { isToken, TOKEN_DICTIONARY } from "./constants/dictionary";
 import { CHARACTER_LIST } from "./constants/characters";
 import { RecognizerValuesRange } from "./valuesRange";
@@ -104,7 +104,7 @@ const lexicAnalyzer = input => {
         if (currentState === STATES.START && ignoreCharacters(currentChar)) 
             return;
         // Obteniendo nuevo estado
-        const newState = DIAGRAM_TRANSITION[currentState][currentChar];
+        const newState = TRANSITION_DIAGRAM[currentState][currentChar];
         // Agregando al registro de depuración
         addToDebugLog(ch, newState)
         // Lanzando un error léxico si el estado inicial y el caracter actual no retorna un nuevo estado

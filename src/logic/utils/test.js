@@ -12,7 +12,7 @@ const test = () => {
 
 const test3 = () => {
     try {
-        const [componentList, debugLog] = lexicAnalyzer(`ssdiF for &&1`);
+        const [componentList, debugLog] = lexicAnalyzer(`sds1 &&!!+*/3!`);
         showConsoleDebugLog(debugLog);
         console.log(componentList);
     }

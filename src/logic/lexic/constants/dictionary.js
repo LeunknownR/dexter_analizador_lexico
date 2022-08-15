@@ -10,6 +10,7 @@ export const TOKEN_DICTIONARY = {
     [STATES.END_PAREN]: "Paréntesis de cierre",
     [STATES.OPERATOR_CONJ_F]: "Operador de conjunción",
     [STATES.OPERATOR_DISJ_F]: "Operador de disyunción",
+    [STATES.OPERATOR_NOT]: "Operador de negación",
     [STATES.EOF]: "Cierre de sentencia",
     [STATES.RESERVED_WORD]: "Palabra reservada"
 };
