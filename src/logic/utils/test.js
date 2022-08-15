@@ -12,9 +12,11 @@ const test = () => {
 
 const test3 = () => {
     try {
-        const [componentList, debugLog] = lexicAnalyzer(`sds1 &&!!+*/3!`);
+        const [componentList, debugLog] = lexicAnalyzer(`sds1!@\`"Las personas +\` 32 - ident_2+`);
         showConsoleDebugLog(debugLog);
-        console.log(componentList);
+        for (const component of componentList) {
+            console.log(component);
+        }
     }
     catch (err) {
         console.log(err);
