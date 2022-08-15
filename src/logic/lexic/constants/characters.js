@@ -15,6 +15,6 @@ export const CHARACTER_LIST = {
     SEMICOLON: ";",
     AMPERSAND: "&",
     VERTICAL_BAR: "|",
-    UTROPSTECKEN: "!",
+    EXCLAMATION_MARK: "!", // Está en sueco xD, debo ponerle EXCLAMATION_MARK
     LINE_BREAK: "\n"
 };

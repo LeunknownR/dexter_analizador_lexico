@@ -24,7 +24,7 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 * Operador de conjunción: && [x]
 * Operador de disyunción: || [x]
-* Operador de negación: !
+* Operador de negación: ! [x]
 ### Persona 3
 
 

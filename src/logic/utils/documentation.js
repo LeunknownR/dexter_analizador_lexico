@@ -36,7 +36,7 @@ const documentation = [
             },
             {
                 description: "Operador de negación",
-                lexeme: CHARACTER_LIST.UTROPSTECKEN
+                lexeme: CHARACTER_LIST.EXCLAMATION_MARK
             }
         ]
     }

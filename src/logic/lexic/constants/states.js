@@ -10,6 +10,7 @@ export const STATES = {
     OPERATOR_CONJ_F: "operatorConjF",
     OPERATOR_DISJ_1: "operatorDisj1",
     OPERATOR_DISJ_F: "operatorDisjF",
+    OPERATOR_NOT: "operatorNot",
     END_PAREN: "endParen",
     EOF: "end",
     RESERVED_WORD: "reservedWord",
