@@ -10,9 +10,9 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 # OPERADORES DE ARITMÉTICOS (6 componentes)
 
-* Operador suma: + [x]
-* Operador división: /
-* Operador producto: *
+* Operador suma: +                      [x]
+* Operador división: /                  [x]
+* Operador producto: *                  [x]
 ### Persona 1
 
 * Operador módulo: %
@@ -22,9 +22,9 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 # OPERADORES LÓGICOS (3 componentes)
 
-* Operador de conjunción: &&
-* Operador de disyunción: ||
-* Operador de negación: !
+* Operador de conjunción: && [x]
+* Operador de disyunción: || [x]
+* Operador de negación: ! [x]
 ### Persona 3
 
 
