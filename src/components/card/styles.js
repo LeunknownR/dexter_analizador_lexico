@@ -5,8 +5,8 @@ export const Container = styled.section`
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
-    @media (max-width: 1700px) {
-        padding-bottom: 50px;
+    @media (max-width: 1699px) {
+        padding-bottom: 61px;
     }
 `;
 
@@ -16,7 +16,7 @@ export const BtnContainer = styled.div`
     align-items: center;
     padding: 23px 0 90px 0;
     gap: 20px;
-    @media (max-width: 1899px) {
+    @media (max-width: 1699px) {
         padding: 23px 0;
     }
 `;

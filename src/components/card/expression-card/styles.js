@@ -6,7 +6,6 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-
     code {
         width: 97%;
         height: 100%;
@@ -23,4 +22,12 @@ export const TextArea = styled.textarea`
     font-size: 22px;
     background-color: #EDF2F4;
     border-radius: 0 0 20px 20px;
+    ::-webkit-scrollbar {
+        background: null;
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-color);
+        border-radius: 20px;
+    }
 `;

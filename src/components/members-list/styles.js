@@ -58,8 +58,8 @@ export const MemberContainer = styled.div`
     justify-content: center;
     background-color: #d0eaff;
     border-radius: 35px;
-    padding: 10px 20px;
-    width: 80%;
+    padding: 10px 10px;
+    width: 88%;
     gap: 10px;
     position: relative;
     overflow: hidden;
