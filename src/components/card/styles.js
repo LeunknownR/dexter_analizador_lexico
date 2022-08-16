@@ -9,14 +9,3 @@ export const Container = styled.section`
         padding-bottom: 61px;
     }
 `;
-
-export const BtnContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 23px 0 90px 0;
-    gap: 20px;
-    @media (max-width: 1699px) {
-        padding: 23px 0;
-    }
-`;

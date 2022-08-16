@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.article`
+export const Container = styled.section`
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 2px #000000;
+    width: 700px;
+`
+export const CardContainer = styled.article`
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -36,7 +45,7 @@ export const Tab = styled.div`
         color: #9478a6;
         transition: 0.4s;
     }
-    #icon {
+    .icon {
         color: #9478a6;
         transition: 0.4s;
     }
@@ -44,7 +53,7 @@ export const Tab = styled.div`
         h5 {
             color: var(--black-xd);
         }
-        #icon {
+        .icon {
             color: var(--black-xd);
         }
     }
@@ -53,7 +62,7 @@ export const Tab = styled.div`
         h5 {
             color: #a4a4a4;
         }
-        #icon {
+        .icon {
             color: #a4a4a4;
         }
     }

@@ -19,19 +19,7 @@ export const Container = styled.article`
 export const ComponentWrapper = styled.div`
     //hmmmmmmmmmmmmmmmmmmmmmmmm
 `;
-export const Title = styled.header`
-    display: flex;
-    align-items: center;
-    h3 {
-        margin: 0;
-        color: var(--primary-color);
-        font-weight: 600;
-    }
-    span {
-        margin: 0;
-        font-weight: 300;
-    }
-`;
+
 export const OperationRow = styled.div`
     display: flex;
     margin-right: 30px;

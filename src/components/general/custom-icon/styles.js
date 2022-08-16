@@ -4,20 +4,19 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     border-radius: 50%;
-    padding: 8px;
-    background-color: ${({ backColor }) => (backColor ? `var(${backColor})` : null)};
+    padding: ${({ padding = "8px" }) => padding};
+    background-color: ${({ backColor }) => (backColor ? `var(${backColor})` : "unset")};
     color: ${({ color }) => (color ? `var(${color})` : "#000000")};
-    #icon {
+    &.icon {
         font-size: 35px;
     }
-    #XL {
+    &.XL {
         font-size: 90px;
     }
-    #M {
+    &.M {
         font-size: 35px;
     }
-    #S {
+    &.S {
         font-size: 20px;
     }
 `;
-

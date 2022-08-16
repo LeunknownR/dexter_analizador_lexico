@@ -1,45 +1,52 @@
 import { useState } from "react";
 
-import { Container, InfoTabs, Tab, InfoBody } from "./styles";
+import { Container, CardContainer, InfoTabs, Tab, InfoBody } from "./styles";
 
 import CustomIcon from "components/general/custom-icon/CustomIcon";
-import NullCard from "../null-card/NullCard";
 import AnalysisDetail from "./analysisDetail/AnalysisDetail";
 import LexicalComponent from "./lexicalComponents/LexicalComponents";
-
+import HeaderCard from "../card-template/HeaderCard";
 const InfoCard = () => {
-    const [toggleState, setToggleState] = useState(1);
+    const [tabIdx, setTabIdx] = useState(0);
 
-    const toggleTab = (idx) => {
-        setToggleState(idx);
+    const getTabActive = (idx) => {
+        const classList = [];
+        tabIdx === idx && classList.push("active-tab");
+        return classList.join(" ");
     };
+
+    const getTabPropsHandler = (idx) => {
+        return {
+            className: getTabActive(idx),
+            onClick: () => setTabIdx(idx),
+        };
+    };
+
+    const views = [<AnalysisDetail />, <LexicalComponent />];
 
     return (
         <Container>
-            <InfoTabs>
-                <Tab
-                    onClick={() => toggleTab(1)}
-                    className={toggleState === 1 ? "active-tab" : null}
-                >
-                    <CustomIcon icon="ep:notebook" />
-                    <h5>Componentes Léxicos</h5>
-                </Tab>
-                <Tab
-                    onClick={() => toggleTab(2)}
-                    className={toggleState === 2 ? "active-tab" : null}
-                >
-                    <CustomIcon icon="ant-design:file-search-outlined" />
-                    <h5>Detalle del Análisis</h5>
-                </Tab>
-            </InfoTabs>
-            <InfoBody>
-                {toggleState === 1 ? <LexicalComponent/> : <AnalysisDetail/>}
-                {/* <NullCard
+            <HeaderCard cardName="Más Información" />
+            <CardContainer>
+                <InfoTabs>
+                    <Tab {...getTabPropsHandler(0)}>
+                        <CustomIcon icon="ep:notebook" />
+                        <h5>Componentes Léxicos</h5>
+                    </Tab>
+                    <Tab {...getTabPropsHandler(1)}>
+                        <CustomIcon icon="ant-design:file-search-outlined" />
+                        <h5>Detalle del Análisis</h5>
+                    </Tab>
+                </InfoTabs>
+                <InfoBody>
+                    {views[tabIdx] || views[0]}
+                    {/* <NullCard
                     icon="dashicons:table-row-delete"
                     title="SIN REGISTROS"
                     subtitle="Introduce una expresión y haz click para generar el registro de operaciones del análisis"
                 /> */}
-            </InfoBody>
+                </InfoBody>
+            </CardContainer>
         </Container>
     );
 };
