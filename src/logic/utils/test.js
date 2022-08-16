@@ -12,7 +12,7 @@ const test = () => {
 
 const test3 = () => {
     try {
-        const [componentList, debugLog] = lexicAnalyzer(`sds1!@\`"Las personas +\` 32 - ident_2+`);
+        const [componentList, debugLog] = lexicAnalyzer(`3-5%5`);
         showConsoleDebugLog(debugLog);
         for (const component of componentList) {
             console.log(component);

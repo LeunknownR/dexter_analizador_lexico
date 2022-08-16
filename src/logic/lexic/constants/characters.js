@@ -16,6 +16,7 @@ export const CHARACTER_LIST = {
     GREATER_THAN: ">",
     DOUBLE_QUOTE: "\"",
     BACKTICK: "`",
+    PERCENTAGE:"%", 
     AT: "@",
     SEMICOLON: ";",
     AMPERSAND: "&",

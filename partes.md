@@ -15,9 +15,9 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 * Operador producto: *                  [x]
 ### Persona 1
 
-* Operador módulo: %
-* Operador resta: -
-* Operador potencia: **
+* Operador módulo: % [x]
+* Operador resta: -  [x]
+* Operador potencia: ** 
 ### Persona 2
 
 # OPERADORES LÓGICOS (3 componentes)
