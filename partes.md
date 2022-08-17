@@ -15,9 +15,9 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 * Operador producto: *                  [x]
 ### Persona 1
 
-* Operador módulo: %
-* Operador resta: -
-* Operador potencia: **
+* Operador módulo: % [x]
+* Operador resta: -  [x]
+* Operador potencia: ** 
 ### Persona 2
 
 # OPERADORES LÓGICOS (3 componentes)
@@ -37,7 +37,7 @@ Incrementador de variable: +=
 
 Decrementador de variable 1 en 1: --
 Decrementador de variable: -=
-Multiplicador de variable: *=
+Multiplicador de variable: *= [x]
 ## Persona 3
 
 Divisor de variable: /=
@@ -50,7 +50,7 @@ Operador ternario falso: :
 
 Operador menor que: <
 ### Persona 2
-Operador mayor que: >
+Operador mayor que: > [x]
 ### Persona 3
 
 Operador igual: ==
@@ -67,8 +67,8 @@ Decimal: 1.7, 0.35, (-2.7)
 Entero: 96, 0, (-120)
 ### Persona 1
 
-Cadena: "sadkkasjdkjs"
-Cadena interpolación: @`""""sadkkasjdkjs " ''`
+Cadena: "sadkkasjdkjsx_ + 2" [x]
+Cadena interpolación: @`""""sadkkasjdkjs " ''` [x]
 ### Persona 3
 
 Caracter: '2'

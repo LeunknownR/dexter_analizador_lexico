@@ -108,7 +108,7 @@ const lexicAnalyzer = input => {
         // Agregando al registro de depuración
         addToDebugLog(ch, newState)
         // Lanzando un error léxico si el estado inicial y el caracter actual no retorna un nuevo estado
-        if (currentState === STATES.START && !newState)
+        if (currentState === STATES.START && !newState)  
             lexicError(ch);
         // Actualizando estado actual
         currentState = newState;
