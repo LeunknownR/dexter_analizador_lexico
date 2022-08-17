@@ -12,7 +12,7 @@ const test = () => {
 
 const test3 = () => {
     try {
-        const [componentList, debugLog] = lexicAnalyzer(`3-5%5`);
+        const [componentList, debugLog] = lexicAnalyzer(`1<=6||2>=6`);
         showConsoleDebugLog(debugLog);
         for (const component of componentList) {
             console.log(component);
