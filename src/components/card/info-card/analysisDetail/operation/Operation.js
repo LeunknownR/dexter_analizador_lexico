@@ -1,23 +1,39 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
 
-const Operation = () => {
+import { Container, Content } from "./styles";
+
+const Operation = ({ state, charGroup, charValue }) => {
     return (
-        <>
-            <CustomIcon
-                icon="ic:outline-keyboard-arrow-right"
-                color="--primary-color"
-                backColor="--third-color"
-                size="S"
-                padding="3px"
-            />
-            <span>start</span>
-            <CustomIcon
-                icon="bi:arrow-down-up"
-                color="--secondary-color"
-                size="S"
-            />
-            <span>letter i</span>
-        </>
+        <Container>
+            <Content>
+                <div>
+                    <CustomIcon
+                        icon="ic:outline-keyboard-arrow-right"
+                        color="--primary-color"
+                        backColor="--third-color"
+                        size="S"
+                        padding="3px"
+                    />
+                </div>
+                <div>
+                    <span>{state}</span>
+                </div>
+            </Content>
+            <Content>
+                <div>
+                    <CustomIcon
+                        icon="bi:arrow-down-up"
+                        color="--secondary-color"
+                        size="S"
+                    />
+                </div>
+                <div>
+                    <span>
+                        {charGroup} {charValue}
+                    </span>
+                </div>
+            </Content>
+        </Container>
     );
 };
 

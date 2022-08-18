@@ -1,16 +1,18 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
 
-const OperationType = ({tokenKey}) => {
+import { Container, NewState } from "./styles";
+
+const OperationType = ({newState}) => {
     return (
-        <>
+        <Container>
             <CustomIcon
                 icon="bi:arrow-right"
                 color="--secondary-back-color"
-                backColor="--black-xd"
+                backColor={newState === "error" ? "--error-color" : "--black-xd"}
                 size="S"
             />
-            <h6>{tokenKey}</h6>
-        </>
+            <NewState color={newState === "error" ? "var(--error-color)" : "var(--black-xd)"}>{newState}</NewState>
+        </Container>
     );
 };
 

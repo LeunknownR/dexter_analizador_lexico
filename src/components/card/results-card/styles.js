@@ -24,26 +24,7 @@ export const CardContainer = styled.article`
         margin-bottom: 15px;
     }
 `;
-export const Categories = styled.div`
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    gap: 40px;
-    padding-right: 24px;
-    & div {
-        display: flex;
-        justify-content: center;
-        border-bottom: 2px solid var(--secondary-color);
-        width: 100%;
-        padding: 5px 0;
-    }
-    & h4 {
-        color: var(--secondary-color);
-        font-weight: 600;
-        margin: 0;
-    }
-`;
-export const Components = styled.div`
+export const ResultComponents = styled.div`
     display: flex;
     flex-direction: column;
     width: 85%;
@@ -57,14 +38,5 @@ export const Components = styled.div`
     ::-webkit-scrollbar-thumb {
         background: var(--scrollbar-color);
         border-radius: 20px;
-    }
-`;
-export const Component = styled.div`
-    display: flex;
-    background-color: var(--fifth-color);
-    padding: 15px 20px;
-    border-radius: 5px;
-    & div {
-        width: 100%;
     }
 `;

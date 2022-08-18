@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
+
 import {
     Container,
     CardContainer,
@@ -11,20 +13,24 @@ import {
 import CustomBtn from "components/general/custom-btn/CustomBtn";
 import HeaderCard from "../card-template/HeaderCard";
 
-const ExpressionCard = ({ cardName }) => {
+const ExpressionCard = ({ setAnalyzedList }) => {
     const [expression, setExpression] = useState("");
 
-    useEffect(() => {
-        console.log(expression);
-    }, [expression]);
+    // useEffect(() => {
+    //     console.log(expression);
+    // }, [expression]);
 
     const changeExpression = ({ target: { value } }) => {
         setExpression(value);
     };
 
+    const analyze = () => {
+        setAnalyzedList(lexicAnalyzer(expression))
+    };
+
     const clean = () => {
-        setExpression("")
-    }
+        setExpression("");
+    };
     return (
         <Container>
             <CardContainer>
@@ -54,6 +60,7 @@ const ExpressionCard = ({ cardName }) => {
                     icon="arcticons:audio-spectrum-analyzer"
                     color="--secondary-color"
                     backColor="--secondary-back-color"
+                    onClick={analyze}
                     disable={!expression}
                 />
             </BtnContainer>

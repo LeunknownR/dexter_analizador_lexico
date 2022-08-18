@@ -1,27 +1,32 @@
-import {
-    Container,
-    ComponentWrapper,
-    OperationRow
-} from "./styles";
+import { Container } from "./styles";
 
-import Title from "./AnalysisTitle/AnalysisTitle";
-import Operation from "./operation/Operation";
-import OperationType from "./operation-type/OperationType";
+import OperationComponent from "./operation-component/OperationComponent";
+import NullCard from "components/card/null-card/NullCard";
 
-const AnalysisDetail = () => {
+const AnalysisDetail = ({ operationsList }) => {
     return (
         <Container>
-            <ComponentWrapper>
-                <Title title="Palabra reservada" component="if"/>
-                <OperationRow>
-                    <Operation/>
-                    <OperationType/>
-                </OperationRow>
-                <OperationRow>
-                    <Operation/>
-                    <OperationType/>
-                </OperationRow>
-            </ComponentWrapper>
+            {!operationsList ? (
+                <NullCard
+                icon="dashicons:table-row-delete"
+                title="SIN REGISTROS"
+                subtitle="Introduce una expresión y haz click para generar el registro de operaciones del análisis"
+            />
+            ) : (
+                operationsList
+                ?.map(({isReservedWord, operations, title: { token, lexeme }},idx) => {
+                        return (
+                            <OperationComponent
+                                isReservedWord={isReservedWord}
+                                operations={operations}
+                                token={token}
+                                lexeme={lexeme}
+                                key={idx}
+                            />
+                        );
+                    }
+                )
+            )}
         </Container>
     );
 };

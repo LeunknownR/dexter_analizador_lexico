@@ -6,7 +6,10 @@ export const Container = styled.article`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    padding: 20px 35px 25px 35px;
-    overflow: hidden;
+    img {
+        height: 250px;
+    }
+    h1 {
+        margin: 0;
+    }
 `;

@@ -15,11 +15,11 @@ const test3 = () => {
         const [componentList, debugLog] = lexicAnalyzer(`3-5%5`);
         showConsoleDebugLog(debugLog);
         for (const component of componentList) {
-            console.log(component);
+            // console.log(component);
         }
     }
     catch (err) {
-        console.log(err);
+        // console.log(err);
     }
 }
 const showConsoleDebugLog = debugLog => {
@@ -30,7 +30,7 @@ const showConsoleDebugLog = debugLog => {
             const group = char.group ? `${char.group} ` : "";
             return `>>> ${state} && ${group}${char.value} = ${newState}`;
         })];
-        return newSimplifiedLog;
+        // return newSimplifiedLog;
     }, []));
 }
 test3();

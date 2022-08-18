@@ -15,6 +15,9 @@ export const Container = styled.div`
     }
     &.M {
         font-size: 35px;
+        @media (max-height: 650px) {
+            font-size: 30px;
+        }
     }
     &.S {
         font-size: 20px;

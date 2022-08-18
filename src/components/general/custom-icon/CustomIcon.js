@@ -2,7 +2,7 @@ import { Container } from "./styles";
 
 import { Icon } from "@iconify/react";
 
-const CustomIcon = ({ icon, color, backColor, size, padding }) => {
+const CustomIcon = ({ icon, color, backColor, size, padding, rotate }) => {
     const getClassName = () => {
         const classList = [];
         classList.push(size || "icon");
@@ -15,11 +15,7 @@ const CustomIcon = ({ icon, color, backColor, size, padding }) => {
             backColor={backColor}
             padding={padding}
         >
-            {icon && (
-                <Icon
-                    icon={icon}
-                />
-            )}
+            {icon && <Icon icon={icon} rotate={rotate} />}
         </Container>
     );
 };

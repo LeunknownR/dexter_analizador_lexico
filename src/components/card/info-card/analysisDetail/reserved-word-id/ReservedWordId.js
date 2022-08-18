@@ -1,18 +1,18 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
 import { Container } from "./styles";
 
-const AnalysisTitle = ({ title, component }) => {
+const ReservedWordIdentifier = () => {
     return (
         <Container>
-            <h3>{title}</h3>
             <CustomIcon
-                icon="bxs:right-arrow"
+                icon="mdi:pentagram"
                 color="--secondary-color"
                 size="S"
+                rotate="2"
             />
-            <span className="custom-subtitle">{component}</span>
+            <span>IDENTIFICADOR DENTRO DE PALABRAS RESERVADAS</span>
         </Container>
     );
 };
 
-export default AnalysisTitle;
+export default ReservedWordIdentifier;

@@ -8,7 +8,7 @@ export const Container = styled.article`
     height: 90%;
     gap: 30px;
     ::-webkit-scrollbar {
-        background: null;
+        background: unset;
         width: 10px;
     }
     ::-webkit-scrollbar-thumb {
@@ -16,18 +16,4 @@ export const Container = styled.article`
         border-radius: 20px;
     }
 `;
-export const ComponentWrapper = styled.div`
-    //hmmmmmmmmmmmmmmmmmmmmmmmm
-`;
 
-export const OperationRow = styled.div`
-    display: flex;
-    margin-right: 30px;
-    justify-content: space-around;
-    align-items: center;
-    max-height: 50px;
-    h6 {
-        font-size: 16px;
-        color: var(--black-xd)
-    }
-`;
