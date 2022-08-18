@@ -30,7 +30,7 @@ const test3 = () => {
         showConsoleDebugLog(debugLog);
         console.log(manuelExpressions[expressionIdx]);
         for (const component of componentList) {
-            console.log(component);
+            // console.log(component);
         }
         // for (let i = 6; i < manuelExpressions.length; i++) {
         //     try {
@@ -49,7 +49,7 @@ const test3 = () => {
 
     }
     catch (err) {
-        console.log(err);
+        // console.log(err);
     }
 }
 const showConsoleDebugLog = debugLog => {
@@ -60,7 +60,7 @@ const showConsoleDebugLog = debugLog => {
             const group = char.group ? `${char.group} ` : "";
             return `>>> ${state} && ${group}${char.value} = ${newState}`;
         })];
-        return newSimplifiedLog;
+        // return newSimplifiedLog;
     }, []));
 }
 test3();
