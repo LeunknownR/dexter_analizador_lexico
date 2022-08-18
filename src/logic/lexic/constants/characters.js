@@ -14,6 +14,7 @@ export const CHARACTER_LIST = {
     END_BRACKET: "]",
     EQUALS: "=",
     GREATER_THAN: ">",
+    LESS_THAN: "<",
     DOUBLE_QUOTE: "\"",
     BACKTICK: "`",
     PERCENTAGE:"%", 
@@ -22,5 +23,6 @@ export const CHARACTER_LIST = {
     AMPERSAND: "&",
     VERTICAL_BAR: "|",
     EXCLAMATION_MARK: "!", // Está en sueco xD, debo ponerle EXCLAMATION_MARK
-    LINE_BREAK: "\n"
+    LINE_BREAK: "\n",
+    DOLLAR: "$"
 };

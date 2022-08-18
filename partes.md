@@ -17,7 +17,7 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 * Operador módulo: % [x]
 * Operador resta: -  [x]
-* Operador potencia: ** 
+* Operador potencia: ** [X]
 ### Persona 2
 
 # OPERADORES LÓGICOS (3 componentes)
@@ -30,9 +30,9 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 # OPERADORES DE ASIGNACIÓN (10 componentes)
 
-Operador de asignación: $=
-Incrementador de variable 1 en 1: ++
-Incrementador de variable: +=
+Operador de asignación: $= [x]
+Incrementador de variable 1 en 1: ++[x]
+Incrementador de variable: += [x]
 ### Persona 2
 
 Decrementador de variable 1 en 1: --
@@ -48,7 +48,7 @@ Operador ternario falso: :
 
 # OPERADORES DE COMPARACIÓN (6 componentes)
 
-Operador menor que: <
+Operador menor que: < [x]
 ### Persona 2
 Operador mayor que: > [x]
 ### Persona 3
@@ -57,8 +57,8 @@ Operador igual: ==
 Operador diferente: !=
 ### Persona 1
 
-Operador menor o igual que: <=
-Operador mayor o igual que: >=
+Operador menor o igual que: <= [x]
+Operador mayor o igual que: >= [x]
 ### Persona 2
 
 # Literales (7 componentes)
