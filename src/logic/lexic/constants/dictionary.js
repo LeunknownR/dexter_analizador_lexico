@@ -8,6 +8,7 @@ export const TOKEN_DICTIONARY = {
     [STATES.OPERATOR_SUBTRACTION]: "Operador resta",
     [STATES.OPERATOR_DIVISION]: "Operador división",
     [STATES.OPERATOR_PRODUCT]: "Operador producto",
+    [STATES.OPERATOR_POWER] : "Operador potencia",
     [STATES.OPERATOR_MODULE]: "Operador módulo",
     [STATES.START_PAREN]: "Paréntesis de apertura",
     [STATES.END_PAREN]: "Paréntesis de cierre",
@@ -18,7 +19,13 @@ export const TOKEN_DICTIONARY = {
     [STATES.OPERATOR_GREATER_THAN]: "Operador mayor que",
     [STATES.STRING_F]: "Cadena de caracteres",
     [STATES.STRING_INTERP_F]: "Cadena de caracteres con interpolación",
-    [STATES.EOF]: "Cierre de sentencia"
+    [STATES.EOF]: "Cierre de sentencia",
+    [STATES.OPERATOR_ASSIGNMENT_F]: "Operador de asignación",
+    [STATES.INCREMENTOR_VAR_1_1]: "Incrementador de variable 1 en 1",
+    [STATES.INCREMENTOR_VAR]: "Incrementador de variable",
+    [STATES.OPERATOR_LESS_THAN]: "Operador menor que",
+    [STATES.OPERATOR_LESS_THAN_OR_EQUAL_TO]: "Operador menor o igual que",
+    [STATES.OPERATOR_GREATER_THAN_OR_EQUAL_TO]: "Operador mayor o igual que"
 };
 
 export const isToken = token => {

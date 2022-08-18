@@ -6,6 +6,7 @@ export const STATES = {
     OPERATOR_SUBTRACTION: "operatorSubtraction",
     OPERATOR_DIVISION: "operatorDivision",
     OPERATOR_PRODUCT: "operatorProduct",
+    OPERATOR_POWER: "operatorPower",
     OPERATOR_MODULE: "operatorModule",
     START_PAREN: "startParen",
     OPERATOR_CONJ_1: "operatorConj1",
@@ -17,6 +18,9 @@ export const STATES = {
     DECREMENTOR_VAR: "decrementorVar",
     MULTIPLIER_VAR: "multiplierVar",
     OPERATOR_GREATER_THAN: "operatorGreaterThan",
+    OPERATOR_GREATER_THAN_OR_EQUAL_TO : "operatorGreaterThanOrEqualTo",
+    OPERATOR_LESS_THAN: "operatorLessThan",
+    OPERATOR_LESS_THAN_OR_EQUAL_TO : "operatorLessThanOrEqualTo",
     END_PAREN: "endParen",
     STRING_1: "string1",
     STRING_F: "stringF",
@@ -25,5 +29,9 @@ export const STATES = {
     STRING_INTERP_F: "stringInterpolationF",
     EOF: "end",
     RESERVED_WORD: "reservedWord",
-    ERROR: "error"
+    ERROR: "error",
+    OPERATOR_ASSIGNMENT_1: "operatorAssignment1",
+    OPERATOR_ASSIGNMENT_F: "operatorAssignmentF",
+    INCREMENTOR_VAR_1_1: "incremenVart11",
+    INCREMENTOR_VAR: "incremenVart"
 };
