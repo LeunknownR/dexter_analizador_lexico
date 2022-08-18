@@ -8,7 +8,8 @@
     --secondary-back-color: #FFFFFF;
     --black-xd: #000000;
     --barely-used-gray: #7E7E7E;
-
+    --scrollbar-color: #8EB5F0;
+    --error-color: #FF4848;
 }
 .custom-title {
     font-size: 30px;
