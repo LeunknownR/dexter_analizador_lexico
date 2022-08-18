@@ -5,7 +5,7 @@ import { RecognizerValuesRange } from "./valuesRange";
 import { STATES } from "./constants/states";
 import { isReservedWord } from "./constants/reservedWords";
 
-const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE].includes(ch);
+const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
 
 const lexicAnalyzer = input => {
     // Convirtiando la entrada a un array de caracteres
