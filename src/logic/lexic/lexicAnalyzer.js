@@ -89,8 +89,6 @@ const lexicAnalyzer = input => {
             return;
         if (RecognizerValuesRange.Letter(ch)) 
             currentChar = CHARACTER_LIST.LETTER;
-        else if (ch === CHARACTER_LIST.UNDERSCORE)
-            currentChar = CHARACTER_LIST.UNDERSCORE;
         else if (RecognizerValuesRange.Digit(ch)) 
             currentChar = CHARACTER_LIST.DIGIT;
         else {
@@ -98,7 +96,7 @@ const lexicAnalyzer = input => {
             currentChar = Object.values(CHARACTER_LIST).some(CH => CH === ch) ? ch : null;
             // Lanzando error en caso de no estar permitido
             if (!currentChar) 
-                lexicError()
+                lexicError(ch)
         }
         // Salteando espacio en blanco si está en el estado "start"
         if (currentState === STATES.START && ignoreCharacters(currentChar)) 

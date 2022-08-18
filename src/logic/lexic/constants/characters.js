@@ -1,6 +1,7 @@
 export const CHARACTER_LIST = {
     LETTER: "letter",
     DIGIT: "digit",
+    // HEX_DIGIT: "hexDigit",
     ASTERISK: "*",
     PLUS: "+",
     SLASH: "/",
@@ -12,6 +13,8 @@ export const CHARACTER_LIST = {
     END_PAREN: ")",
     START_BRACKET: "[",
     END_BRACKET: "]",
+    START_CURLY_BRACE: "{",
+    END_CURLY_BRACE: "}",
     EQUALS: "=",
     GREATER_THAN: ">",
     LESS_THAN: "<",
@@ -22,7 +25,12 @@ export const CHARACTER_LIST = {
     SEMICOLON: ";",
     AMPERSAND: "&",
     VERTICAL_BAR: "|",
-    EXCLAMATION_MARK: "!", // Está en sueco xD, debo ponerle EXCLAMATION_MARK
+    EXCLAMATION_MARK: "!",
     LINE_BREAK: "\n",
-    DOLLAR: "$"
+    DOLLAR: "$",
+    NUMBER_SIGN: "#"
 };
+
+export const getCharIdentifier = ch => {
+    return Object.values(CHARACTER_LIST).some(CH => CH === ch) ? ch : null;
+}
