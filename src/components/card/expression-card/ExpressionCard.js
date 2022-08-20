@@ -30,6 +30,7 @@ const ExpressionCard = ({ setAnalyzedList }) => {
 
     const clean = () => {
         setExpression("");
+        setAnalyzedList([]);
     };
     return (
         <Container>
@@ -61,6 +62,7 @@ const ExpressionCard = ({ setAnalyzedList }) => {
                     color="--secondary-color"
                     backColor="--secondary-back-color"
                     onClick={analyze}
+                    outline="--secondary-color"
                     disable={!expression}
                 />
             </BtnContainer>

@@ -11,7 +11,7 @@ const OperationType = ({newState}) => {
                 backColor={newState === "error" ? "--error-color" : "--black-xd"}
                 size="S"
             />
-            <NewState color={newState === "error" ? "var(--error-color)" : "var(--black-xd)"}>{newState}</NewState>
+            <NewState color={newState === "error" ? "var(--error-color)" : "var(--black-xd)"} title={newState}>{newState}</NewState>
         </Container>
     );
 };

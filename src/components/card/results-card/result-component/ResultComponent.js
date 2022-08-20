@@ -4,10 +4,10 @@ const ResultComponent = ({ lexeme, token }) => {
     return (
         <Container>
             <div>
-                <span>{lexeme}</span>
+                <span title={lexeme}>{lexeme}</span>
             </div>
             <div>
-                <span>{token}</span>
+                <span title={token}>{token}</span>
             </div>
         </Container>
     );

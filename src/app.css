@@ -3,10 +3,12 @@ main {
     flex-direction: column;
     background-color: var(--back-color);
 }
-@media (min-height: 1081px) {
+
+@media (min-height: 974px) {
     main {
         min-height: 92.4vh;
         justify-content: center;
+
     }
 }
 

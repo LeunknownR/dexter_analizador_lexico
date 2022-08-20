@@ -51,3 +51,7 @@
     padding: 0;
     margin: 15px 0 0 0;
 }
+.custom-purple-subtitle {
+    color: var(--secondary-color);
+    font-weight: 600;
+}

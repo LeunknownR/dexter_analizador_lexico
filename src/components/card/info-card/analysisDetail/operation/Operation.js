@@ -29,8 +29,9 @@ const Operation = ({ state, charGroup, charValue }) => {
                 </div>
                 <div>
                     <span>
-                        {charGroup} {charValue}
+                        {charGroup}{" "}
                     </span>
+                    <span className="custom-purple-subtitle">{charValue}</span>
                 </div>
             </Content>
         </Container>
