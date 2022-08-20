@@ -12,13 +12,12 @@ const test = () => {
 
 const test3 = () => {
     try {
-        const [componentList, debugLog] = lexicAnalyzer(`1<=6||2>=6`);
+        const [componentList, debugLog] = lexicAnalyzer(`ANA==BAS= ALFA, SELFE? BARABARA: NELMEN ;`);
         showConsoleDebugLog(debugLog);
         for (const component of componentList) {
             console.log(component);
         }
-    }
-    catch (err) {
+    } catch (err) {
         console.log(err);
     }
 }

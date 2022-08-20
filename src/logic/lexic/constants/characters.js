@@ -17,9 +17,12 @@ export const CHARACTER_LIST = {
     LESS_THAN: "<",
     DOUBLE_QUOTE: "\"",
     BACKTICK: "`",
-    PERCENTAGE:"%", 
+    PERCENTAGE: "%",
     AT: "@",
     SEMICOLON: ";",
+    COLON: ":",
+    QUESTION_MARK: "?",
+    COMMA: ",",
     AMPERSAND: "&",
     VERTICAL_BAR: "|",
     EXCLAMATION_MARK: "!", // Está en sueco xD, debo ponerle EXCLAMATION_MARK

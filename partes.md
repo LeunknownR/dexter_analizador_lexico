@@ -40,10 +40,10 @@ Decrementador de variable: -=
 Multiplicador de variable: *= [x]
 ## Persona 3
 
-Divisor de variable: /=
-Potenciador de variable: **=
-Operador ternario verdadero: ?
-Operador ternario falso: :
+Divisor de variable: /= [x]
+Potenciador de variable: **= [x]
+Operador ternario verdadero: ? [x]
+Operador ternario falso: : [x]
 ### Persona 1
 
 # OPERADORES DE COMPARACIÓN (6 componentes)
@@ -53,8 +53,8 @@ Operador menor que: < [x]
 Operador mayor que: > [x]
 ### Persona 3
 
-Operador igual: ==
-Operador diferente: !=
+Operador igual: == [x]
+Operador diferente: != [x]
 ### Persona 1
 
 Operador menor o igual que: <= [x]
@@ -81,7 +81,7 @@ Símbolo de código hexadecimal de color: #023f #0232442f, [0, 1..., 9, a...,f]
 
 Paréntesis de apertura: (
 Paréntesis de cierre: )
-Separación de expresiones: ,
+Separación de expresiones: , [x]
 Delimitador de apertura de bloque de sentencias: {
 ### Persona 1
 
