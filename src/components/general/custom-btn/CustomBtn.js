@@ -22,7 +22,7 @@ const CustomBtn = ({
                 icon={icon}
                 color={color}
                 backColor={backColor}
-                size="S"
+                size="XS"
             />
             {title}
         </Container>

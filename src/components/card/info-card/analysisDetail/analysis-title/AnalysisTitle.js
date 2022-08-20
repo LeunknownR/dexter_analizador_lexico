@@ -8,7 +8,7 @@ const AnalysisTitle = ({ token, lexeme }) => {
             <CustomIcon
                 icon="bxs:right-arrow"
                 color="--secondary-color"
-                size="S"
+                size="XS"
             />
             <span className="custom-subtitle">{lexeme}</span>
         </Container>

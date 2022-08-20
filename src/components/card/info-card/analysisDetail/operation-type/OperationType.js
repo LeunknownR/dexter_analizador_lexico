@@ -9,7 +9,7 @@ const OperationType = ({newState}) => {
                 icon="bi:arrow-right"
                 color="--secondary-back-color"
                 backColor={newState === "error" ? "--error-color" : "--black-xd"}
-                size="S"
+                size="XS"
             />
             <NewState color={newState === "error" ? "var(--error-color)" : "var(--black-xd)"} title={newState}>{newState}</NewState>
         </Container>

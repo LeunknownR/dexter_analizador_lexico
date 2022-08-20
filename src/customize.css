@@ -1,6 +1,7 @@
 :root {
     --primary-color: #161A1D;
     --secondary-color: #6F2DBD;
+    --secondary-color-2: #8A61FF;
     --third-color: #FFCF33;
     --fourth-color: #EDF2F4;
     --fifth-color: #E9ECEF;
@@ -10,6 +11,10 @@
     --barely-used-gray: #7E7E7E;
     --scrollbar-color: #8EB5F0;
     --error-color: #FF4848;
+    --error-color-2: #FF2D2D;
+}
+body.no-scroll {
+    overflow-y: hidden;
 }
 .custom-title {
     font-size: 30px;
@@ -29,6 +34,17 @@
     font-weight: 700;
     margin: 0;
     padding: 0;
+}
+.custom-error-title {
+    color: var(--error-color);
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0;
+}
+@media (max-height: 648.67px) {
+    .custom-error-title {
+        font-size: 18px;
+    }
 }
 .custom-subtitle {
     font-size: 20px;

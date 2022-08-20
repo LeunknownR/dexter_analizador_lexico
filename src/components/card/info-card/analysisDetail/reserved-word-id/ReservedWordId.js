@@ -7,7 +7,7 @@ const ReservedWordIdentifier = () => {
             <CustomIcon
                 icon="mdi:pentagram"
                 color="--secondary-color"
-                size="S"
+                size="XS"
                 rotate="2"
             />
             <span>IDENTIFICADOR DENTRO DE PALABRAS RESERVADAS</span>

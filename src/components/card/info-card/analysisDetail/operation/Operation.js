@@ -11,7 +11,7 @@ const Operation = ({ state, charGroup, charValue }) => {
                         icon="ic:outline-keyboard-arrow-right"
                         color="--primary-color"
                         backColor="--third-color"
-                        size="S"
+                        size="XS"
                         padding="3px"
                     />
                 </div>
@@ -24,7 +24,7 @@ const Operation = ({ state, charGroup, charValue }) => {
                     <CustomIcon
                         icon="bi:arrow-down-up"
                         color="--secondary-color"
-                        size="S"
+                        size="XS"
                     />
                 </div>
                 <div>
