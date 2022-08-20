@@ -12,7 +12,7 @@ const test = () => {
 
 const test3 = () => {
     try {
-        const [componentList, debugLog] = lexicAnalyzer(`ANA==BAS= ALFA, SELFE? BARABARA: NELMEN ;`);
+        const [componentList, debugLog] = lexicAnalyzer(`7-56.5, 45-3,ASD-DD`);
         showConsoleDebugLog(debugLog);
         for (const component of componentList) {
             console.log(component);

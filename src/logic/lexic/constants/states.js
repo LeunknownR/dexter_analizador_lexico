@@ -1,6 +1,7 @@
 export const STATES = {
     START: "start",
     INTEGER: "integer",
+    DECIMAL: "decimal",
     IDENTIFIER: "identifier",
     OPERATOR_PLUS: "operatorPlus",
     OPERATOR_SUBTRACTION: "operatorSubtraction",

@@ -4,6 +4,7 @@ export const TOKEN_DICTIONARY = {
     [STATES.RESERVED_WORD]: "Palabra reservada",
     [STATES.IDENTIFIER]: "Identificador",
     [STATES.INTEGER]: "Entero",
+    [STATES.DECIMAL]: "Decimal",
     [STATES.OPERATOR_PLUS]: "Operador suma",
     [STATES.OPERATOR_SUBTRACTION]: "Operador resta",
     [STATES.OPERATOR_DIVISION]: "Operador división",
