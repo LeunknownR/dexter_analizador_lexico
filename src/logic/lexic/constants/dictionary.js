@@ -13,6 +13,8 @@ export const TOKEN_DICTIONARY = {
     [STATES.OPERATOR_MODULE]: "Operador módulo",
     [STATES.START_PAREN]: "Paréntesis de apertura",
     [STATES.END_PAREN]: "Paréntesis de cierre",
+    [STATES.START_CURLY_BRACE]: "Llave de apertura",
+    [STATES.END_CURLY_BRACE]: "Llave de apertura",
     [STATES.OPERATOR_CONJ_F]: "Operador de conjunción",
     [STATES.OPERATOR_DISJ_F]: "Operador de disyunción",
     [STATES.OPERATOR_NOT]: "Operador de negación",
@@ -23,17 +25,21 @@ export const TOKEN_DICTIONARY = {
     [STATES.OPERATOR_TERNARY_FALSE]: "Operador ternario falso",
     [STATES.OPERATOR_GREATER_THAN]: "Operador mayor que",
     [STATES.STRING_F]: "Cadena de caracteres",
-    [STATES.STRING_INTERP_F]: "Cadena de caracteres con interpolación",
     [STATES.EOF]: "Cierre de sentencia",
+    [STATES.ENTITIES_UNION]: "Unión de entidades",
     [STATES.OPERATOR_ASSIGNMENT_F]: "Operador de asignación",
     [STATES.INCREMENTOR_VAR_1_1]: "Incrementador de variable 1 en 1",
     [STATES.INCREMENTOR_VAR]: "Incrementador de variable",
+    [STATES.DECREMENTOR_VAR_1_1]: "Decrementador de variable 1 en 1",
+    [STATES.DECREMENTOR_VAR]: "Decrementador de variable",
     [STATES.OPERATOR_LESS_THAN]: "Operador menor que",
     [STATES.OPERATOR_LESS_THAN_OR_EQUAL_TO]: "Operador menor o igual que",
     [STATES.OPERATOR_GREATER_THAN_OR_EQUAL_TO]: "Operador mayor o igual que",
     [STATES.OPERATOR_EQUALS]: "Operador igual",
     [STATES.OPERATOR_DIFFERENT]: "Operador diferente",
     [STATES.SEPARATION_OF_EXPRESSIONS]: "Separador de expresiones"
+    [STATES.GENERIC_F]: "Genérico",
+    [STATES.LAMBDA_EXPRES_BODY_DEF_F]: "Definidor de cuerpo de expresión lambda"
 };
 
 export const isToken = token => {

@@ -35,8 +35,8 @@ Incrementador de variable 1 en 1: ++[x]
 Incrementador de variable: += [x]
 ### Persona 2
 
-Decrementador de variable 1 en 1: --
-Decrementador de variable: -=
+Decrementador de variable 1 en 1: -- [x]
+Decrementador de variable: -= [x]
 Multiplicador de variable: *= [x]
 ## Persona 3
 
@@ -74,21 +74,21 @@ Cadena interpolación: @`""""sadkkasjdkjs " ''` [x]
 Caracter: '2'
 Booleano: true, false
 ### Persona 2
-Símbolo de código hexadecimal de color: #023f #0232442f, [0, 1..., 9, a...,f]
+Código hexadecimal de color: #023f #0232442f, [0, 1..., 9, a...,f]
 ### Persona 3
 
 # ESPECIALES (12 componentes)
 
-Paréntesis de apertura: (
-Paréntesis de cierre: )
+Paréntesis de apertura: ( [x]
+Paréntesis de cierre: ) [x]
 Separación de expresiones: , [x]
-Delimitador de apertura de bloque de sentencias: {
+Delimitador de apertura de bloque de sentencias: { [x]
 ### Persona 1
 
-Delimitador de cierre de bloque de sentencias: }
-Unión de expresiones: .
-Genérico: <Person, string, int...>
-Definidor de cuerpo de lambda: => 
+Delimitador de cierre de bloque de sentencias: } [x]
+Unión de entidades: . [x]
+Genérico: <Person, string, int...> [ ] <!-- Pendiente ->
+Definidor de cuerpo de expresión lambda: => [x]
 ### Persona 3
 
 Índice: [], [0], [12323], [24, 6, 4]

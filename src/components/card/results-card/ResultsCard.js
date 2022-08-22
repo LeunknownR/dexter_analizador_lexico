@@ -1,14 +1,38 @@
-import NullCard from "../null-card/NullCard";
-import { Container } from "./styles";
+import { Container, CardContainer, ResultComponents } from "./styles";
 
-const ResultsCard = () => {
+import HeaderCard from "../card-template/HeaderCard";
+import ResultComponent from "./result-component/ResultComponent";
+import ResultCategories from "./result-categories/ResultCategories";
+import NullCard from "../null-card/NullCard";
+
+const ResultsCard = ({ componentList }) => {
     return (
         <Container>
-            <NullCard
-                icon="fluent:table-dismiss-24-filled"
-                title="NO HAY EXPRESIÓN PARA ANALIZAR"
-                subtitle="Introduce una expresión y haz click en analizar para evaluarlo"
-            />
+            <HeaderCard cardName="Resultados" />
+            <CardContainer>
+                {!componentList ? (
+                    <NullCard
+                        icon="fluent:table-dismiss-24-filled"
+                        title="NO HAY EXPRESIÓN PARA ANALIZAR"
+                        subtitle="Introduce una expresión y haz click en analizar para evaluarlo"
+                    />
+                ) : (
+                    <>
+                        <ResultCategories />
+                        <ResultComponents>
+                            {componentList?.map(({ lexeme, token }, idx) => {
+                                return (
+                                    <ResultComponent
+                                        lexeme={lexeme}
+                                        token={token.name}
+                                        key={idx}
+                                    />
+                                );
+                            })}
+                        </ResultComponents>
+                    </>
+                )}
+            </CardContainer>
         </Container>
     );
 };

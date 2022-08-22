@@ -5,7 +5,7 @@ import { RecognizerValuesRange } from "./valuesRange";
 import { STATES } from "./constants/states";
 import { isReservedWord } from "./constants/reservedWords";
 
-const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE].includes(ch);
+const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
 
 const lexicAnalyzer = input => {
     // Convirtiando la entrada a un array de caracteres
@@ -89,8 +89,6 @@ const lexicAnalyzer = input => {
             return;
         if (RecognizerValuesRange.Letter(ch)) 
             currentChar = CHARACTER_LIST.LETTER;
-        else if (ch === CHARACTER_LIST.UNDERSCORE)
-            currentChar = CHARACTER_LIST.UNDERSCORE;
         else if (RecognizerValuesRange.Digit(ch)) 
             currentChar = CHARACTER_LIST.DIGIT;
         else {
@@ -98,7 +96,7 @@ const lexicAnalyzer = input => {
             currentChar = Object.values(CHARACTER_LIST).some(CH => CH === ch) ? ch : null;
             // Lanzando error en caso de no estar permitido
             if (!currentChar) 
-                lexicError()
+                lexicError(ch)
         }
         // Salteando espacio en blanco si está en el estado "start"
         if (currentState === STATES.START && ignoreCharacters(currentChar)) 

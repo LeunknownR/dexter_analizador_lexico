@@ -1,14 +1,28 @@
 import CustomIcon from "../custom-icon/CustomIcon";
 import { Container } from "./styles";
 
-const CustomBtn = ({ title, icon, color, backColor }) => {
+const CustomBtn = ({
+    onClick,
+    title,
+    icon,
+    color,
+    backColor,
+    outline,
+    disable,
+}) => {
     return (
-        <Container color={color} backColor={backColor} disabled={true}>
+        <Container
+            onClick={onClick}
+            color={color}
+            backColor={backColor}
+            disabled={disable}
+            outline={outline}
+        >
             <CustomIcon
                 icon={icon}
                 color={color}
                 backColor={backColor}
-                size="S"
+                size="XS"
             />
             {title}
         </Container>
