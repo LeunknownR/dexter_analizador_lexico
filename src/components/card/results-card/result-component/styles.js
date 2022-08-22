@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
+    align-items: center;
     background-color: var(--fifth-color);
     padding: 15px 20px;
     border-radius: 5px;
-    & div {
+    gap: 5px;
+    & div{
         width: 100%;
         color: #434343;
+        overflow: hidden;
+        word-wrap: break-word;
         :first-child {
             font-weight: 600;
         }

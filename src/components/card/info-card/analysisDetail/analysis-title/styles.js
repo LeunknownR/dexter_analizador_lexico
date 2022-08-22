@@ -11,5 +11,7 @@ export const Container = styled.header`
     span {
         margin: 0;
         font-weight: 300;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 `;

@@ -4,8 +4,8 @@ export const Container = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${({ backColor }) => (backColor ? `var(${backColor})` : 'var(--primary-color)')};
-    background-color: ${({ color }) => (color ? `var(${color})` : 'var(--secondary-back-color)')};
+    color: ${({ backColor = 'var(--primary-color)' }) => `var(${backColor})`};
+    background-color: ${({ color = 'var(--secondary-back-color)' }) => `var(${color})`};
     border: none;
     outline: none;
     border-radius: 15px;
@@ -18,9 +18,9 @@ export const Container = styled.button`
     user-select: none;
     transition: 0.3s;
     &:hover {
-        background-color: ${({ backColor }) => (backColor ? `var(${backColor})` : 'var(--secondary-back-color)')};
-        color: ${({ color }) => (color ? `var(${color})` : 'var(--primary-color)')};
-        outline: 1px solid var(--primary-color);
+        background-color: ${({ backColor = "var(--secondary-back-color)" }) => `var(${backColor})`};
+        color: ${({ color = "var(--primary-color)" }) => `var(${color})`};
+        outline: 1px solid ${({outline = "var(--black-xd)"}) => `var(${outline})`};
     }
     &:active {
         transform: scale(0.9);
