@@ -32,6 +32,8 @@ const test3 = () => {
         for (const component of componentList) {
             // console.log(component);
         }
+    } catch (err) {
+        console.log(err);
         // for (let i = 6; i < manuelExpressions.length; i++) {
         //     try {
         //         const [componentList, debugLog] = lexicAnalyzer(manuelExpressions[i]);
