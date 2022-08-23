@@ -17,6 +17,7 @@ const manuelExpressions = [
     "persona.nombres $= \"Manuel Alejandro\";",
     "estaBarato $= producto => producto.precio < 5;",
     "List<Product> products $= new List<Product>();",
+    "List<G1, G2> products $= new List<G1, G2>();",
     "bgcolor $= #252",
     "forecolor $= #235000",
     "var $= #1",
@@ -25,30 +26,15 @@ const manuelExpressions = [
 
 const test3 = () => {
     try {
-        const expressionIdx = 5;
+        const expressionIdx = 4;
+        console.log(manuelExpressions[expressionIdx]);
         const [componentList, debugLog] = lexicAnalyzer(manuelExpressions[expressionIdx]);
         showConsoleDebugLog(debugLog);
-        console.log(manuelExpressions[expressionIdx]);
         for (const component of componentList) {
-            // console.log(component);
+            console.log(component);
         }
     } catch (err) {
         console.log(err);
-        // for (let i = 6; i < manuelExpressions.length; i++) {
-        //     try {
-        //         const [componentList, debugLog] = lexicAnalyzer(manuelExpressions[i]);
-        //         showConsoleDebugLog(debugLog);
-        //         console.log(manuelExpressions[i]);
-        //         for (const component of componentList) {
-        //             console.log(component);
-        //         }
-        //     }
-        //     catch (err) {
-        //         console.log(manuelExpressions[i]);
-        //         console.log(err);
-        //     }
-        // }
-
     }
 }
 const showConsoleDebugLog = debugLog => {
@@ -59,7 +45,7 @@ const showConsoleDebugLog = debugLog => {
             const group = char.group ? `${char.group} ` : "";
             return `>>> ${state} && ${group}${char.value} = ${newState}`;
         })];
-        // return newSimplifiedLog;
+        return newSimplifiedLog;
     }, []));
 }
 test3();
