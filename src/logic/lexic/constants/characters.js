@@ -1,7 +1,7 @@
 export const CHARACTER_LIST = {
     LETTER: "letter",
     DIGIT: "digit",
-    // HEX_DIGIT: "hexDigit",
+    HEX_DIGIT: "hexDigit",
     ASTERISK: "*",
     PLUS: "+",
     SLASH: "/",

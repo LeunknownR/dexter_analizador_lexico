@@ -39,6 +39,30 @@ const documentation = [
                 lexeme: CHARACTER_LIST.EXCLAMATION_MARK
             }
         ]
+    },
+    {
+        subtitle: "Literales",
+        components: [
+            {
+                description: "Decimal",
+                lexeme: joinCharacters([
+                    `<${CHARACTER_LIST.DIGIT}>`,
+                    CHARACTER_LIST.DOT,
+                    `<${CHARACTER_LIST.DIGIT}>`,
+                ])
+            },
+            {
+                description: "Decimal negativo",
+                lexeme: joinCharacters([
+                    CHARACTER_LIST.START_PAREN,
+                    CHARACTER_LIST.HYPHEN,
+                    `<${CHARACTER_LIST.DIGIT}>`,
+                    CHARACTER_LIST.DOT,
+                    `<${CHARACTER_LIST.DIGIT}>`,
+                    CHARACTER_LIST.END_PAREN
+                ])
+            }
+        ]
     }
 ];
 

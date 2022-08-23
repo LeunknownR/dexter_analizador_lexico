@@ -39,7 +39,11 @@ export const TOKEN_DICTIONARY = {
     [STATES.OPERATOR_DIFFERENT]: "Operador diferente",
     [STATES.SEPARATION_OF_EXPRESSIONS]: "Separador de expresiones",
     [STATES.GENERIC_F]: "Genérico",
-    [STATES.LAMBDA_EXPRES_BODY_DEF]: "Definidor de cuerpo de expresión lambda"
+    [STATES.LAMBDA_EXPRES_BODY_DEF]: "Definidor de cuerpo de expresión lambda",
+    [STATES.COLOR_CODE_HEX_RGB_SIMPLE]: "Color hexadecimal RGB simple",
+    [STATES.COLOR_CODE_HEX_RGBA_SIMPLE]: "Color hexadecimal RGBA simple",
+    [STATES.COLOR_CODE_HEX_RGB_DOUBLE]: "Color hexadecimal RGB de doble digito",
+    [STATES.COLOR_CODE_HEX_RGBA_DOUBLE]: "Color hexadecimal RGBA de doble digito"
 };
 
 export const isToken = token => {

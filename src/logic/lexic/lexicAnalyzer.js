@@ -2,7 +2,7 @@ import { TRANSITION_DIAGRAM } from "./constants/transitionDiagram";
 import { isToken, TOKEN_DICTIONARY } from "./constants/dictionary";
 import { CHARACTER_LIST } from "./constants/characters";
 import { RecognizerValuesRange } from "./valuesRange";
-import { STATES } from "./constants/states";
+import { isColorCodeHexState, STATES } from "./constants/states";
 import { isReservedWord } from "./constants/reservedWords";
 
 const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
@@ -87,7 +87,9 @@ const lexicAnalyzer = input => {
     const iterator = (ch, idx, length, iterate = true) => {
         if (ch === "\r")
             return;
-        if (RecognizerValuesRange.Letter(ch)) 
+        if (isColorCodeHexState(currentState) && RecognizerValuesRange.HexDigit(ch)) 
+            currentChar = CHARACTER_LIST.HEX_DIGIT;
+        else if (RecognizerValuesRange.Letter(ch)) 
             currentChar = CHARACTER_LIST.LETTER;
         else if (RecognizerValuesRange.Digit(ch)) 
             currentChar = CHARACTER_LIST.DIGIT;

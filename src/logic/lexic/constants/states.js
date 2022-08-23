@@ -50,7 +50,29 @@ export const STATES = {
     ENTITIES_UNION: "entitiesUnion",
     LAMBDA_EXPRES_BODY_DEF: "lambdaExpressionBodyDefiner",
     GENERIC_1: "generic1",
+    GENERIC_2: "generic2",
     GENERIC_F: "genericF",
-    // Código hexadecimal de color
-    COLOR_CODE_HEX_1: "colorCodeHex1"
+    COLOR_CODE_HEX_1: "colorCodeHex1",
+    COLOR_CODE_HEX_2: "colorCodeHex2",
+    COLOR_CODE_HEX_3: "colorCodeHex3",
+    COLOR_CODE_HEX_RGB_SIMPLE: "colorCodeHexRGBSimple",
+    COLOR_CODE_HEX_RGBA_SIMPLE: "colorCodeHexRGBASimple",
+    COLOR_CODE_HEX_4: "colorCodeHex4",
+    COLOR_CODE_HEX_RGB_DOUBLE: "colorCodeHexRGBDouble",
+    COLOR_CODE_HEX_5: "colorCodeHex5",
+    COLOR_CODE_HEX_RGBA_DOUBLE: "colorCodeHexRGBADouble"
 };
+
+export const isColorCodeHexState = STATE => (
+    [
+        STATES.COLOR_CODE_HEX_1,
+        STATES.COLOR_CODE_HEX_2,
+        STATES.COLOR_CODE_HEX_3,
+        STATES.COLOR_CODE_HEX_RGB_SIMPLE,
+        STATES.COLOR_CODE_HEX_RGBA_SIMPLE,
+        STATES.COLOR_CODE_HEX_4,
+        STATES.COLOR_CODE_HEX_RGB_DOUBLE,
+        STATES.COLOR_CODE_HEX_5,
+        STATES.COLOR_CODE_HEX_RGBA_DOUBLE,
+    ].includes(STATE)
+);

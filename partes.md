@@ -10,14 +10,14 @@ if, else, doing, switch, case, whiling, const, forof, of, for, static, private, 
 
 # OPERADORES DE ARITMÉTICOS (6 componentes)
 
-* Operador suma: +                      [x]
-* Operador división: /                  [x]
-* Operador producto: *                  [x]
+* Operador suma: + [x]
+* Operador división: / [x]
+* Operador producto: * [x]
 ### Persona 1
 
 * Operador módulo: % [x]
 * Operador resta: -  [x]
-* Operador potencia: ** [X]
+* Operador potencia: ** [x]
 ### Persona 2
 
 # OPERADORES LÓGICOS (3 componentes)
@@ -74,7 +74,11 @@ Cadena interpolación: @`""""sadkkasjdkjs " ''` [x]
 Caracter: '2'
 Booleano: true, false
 ### Persona 2
-Código hexadecimal de color: #023f #0232442f, [0, 1..., 9, a...,f]
+Código hexadecimal de color: [x]
+#023 =>  Color hexadecimal RGB simple
+#023f =>  Color hexadecimal RGBA simple
+#02324f => Color hexadecimal RGB de doble digito
+#0232442f => Color hexadecimal RGBA de doble digito
 ### Persona 3
 
 # ESPECIALES (12 componentes)
@@ -87,7 +91,7 @@ Delimitador de apertura de bloque de sentencias: { [x]
 
 Delimitador de cierre de bloque de sentencias: } [x]
 Unión de entidades: . [x]
-Genérico: <Person, string, int...> [ ] <!-- Pendiente ->
+Genérico: <Person, string, int...> [x]
 Definidor de cuerpo de expresión lambda: => [x]
 ### Persona 3
 

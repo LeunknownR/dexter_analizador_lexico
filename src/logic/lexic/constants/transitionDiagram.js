@@ -1,17 +1,12 @@
 import { STATES } from "./states";
 import { CHARACTER_LIST } from "./characters";
 /*
-             |    letra       |digito       |     _
+             |    letter    |   digit      |     _
 ---------------------------------------------------------------
-inicio       |  identificador |    entero     | identificador
-identificador|  identificador | identificador | identificador
-entero       |  identificador |    entero     | error
+start        |  identifier  |   integer    | identifier
+identifier   |  identifier  |  identifier  | identifier
+integer      |              |    integer   |   
 */
-
-// DECREMENTOR_VAR_1_1: "decrementorVar11",
-// DECREMENTOR_VAR: "decrementorVar",
-// Decrementador de variable: --
-// Decrementador de variable: -=
 
 const TO_STRING_1 = Object.values(CHARACTER_LIST)
     .filter(value => value !== CHARACTER_LIST.DOUBLE_QUOTE)
@@ -65,6 +60,7 @@ export const TRANSITION_DIAGRAM = {
         [CHARACTER_LIST.EQUALS]: STATES.OPERATOR_EQUALS_F,
         [CHARACTER_LIST.GREATER_THAN]: STATES.LAMBDA_EXPRES_BODY_DEF
     },
+    [STATES.LAMBDA_EXPRES_BODY_DEF]: {},
     [STATES.OPERATOR_EQUALS_F]: {},
     [STATES.INTEGER]: {
         [CHARACTER_LIST.DIGIT]: STATES.INTEGER,
@@ -141,9 +137,39 @@ export const TRANSITION_DIAGRAM = {
     },
     [STATES.GENERIC_1]: {
         ...GET_AS_IDENTIFIER(STATES.GENERIC_1),
+        [CHARACTER_LIST.WHITE_SPACE]: STATES.GENERIC_1,
+        [CHARACTER_LIST.COMMA]: STATES.GENERIC_2,
         [CHARACTER_LIST.GREATER_THAN]: STATES.GENERIC_F
+    },
+    [STATES.GENERIC_2]: {
+        ...GET_AS_IDENTIFIER(STATES.GENERIC_1),
+        [CHARACTER_LIST.WHITE_SPACE]: STATES.GENERIC_2
     },
     [STATES.GENERIC_F]: {},
     [STATES.OPERATOR_LESS_THAN_OR_EQUAL_TO]:{},
-    [STATES.COLOR_CODE_HEX_1]: {}
+    [STATES.COLOR_CODE_HEX_1]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_2
+    },
+    [STATES.COLOR_CODE_HEX_2]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_3
+    },
+    [STATES.COLOR_CODE_HEX_3]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_RGB_SIMPLE
+    },
+    [STATES.COLOR_CODE_HEX_RGB_SIMPLE]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_RGBA_SIMPLE
+    },
+    [STATES.COLOR_CODE_HEX_RGBA_SIMPLE]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_4
+    },
+    [STATES.COLOR_CODE_HEX_4]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_RGB_DOUBLE
+    },
+    [STATES.COLOR_CODE_HEX_RGB_DOUBLE]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_5
+    },
+    [STATES.COLOR_CODE_HEX_5]: {
+        [CHARACTER_LIST.HEX_DIGIT]: STATES.COLOR_CODE_HEX_RGBA_DOUBLE
+    },
+    [STATES.COLOR_CODE_HEX_RGBA_DOUBLE]: {}
 };
