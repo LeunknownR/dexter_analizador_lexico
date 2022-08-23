@@ -35,11 +35,11 @@ export const TOKEN_DICTIONARY = {
     [STATES.OPERATOR_LESS_THAN]: "Operador menor que",
     [STATES.OPERATOR_LESS_THAN_OR_EQUAL_TO]: "Operador menor o igual que",
     [STATES.OPERATOR_GREATER_THAN_OR_EQUAL_TO]: "Operador mayor o igual que",
-    [STATES.OPERATOR_EQUALS]: "Operador igual",
+    [STATES.OPERATOR_EQUALS_F]: "Operador igual",
     [STATES.OPERATOR_DIFFERENT]: "Operador diferente",
-    [STATES.SEPARATION_OF_EXPRESSIONS]: "Separador de expresiones"
+    [STATES.SEPARATION_OF_EXPRESSIONS]: "Separador de expresiones",
     [STATES.GENERIC_F]: "Genérico",
-    [STATES.LAMBDA_EXPRES_BODY_DEF_F]: "Definidor de cuerpo de expresión lambda"
+    [STATES.LAMBDA_EXPRES_BODY_DEF]: "Definidor de cuerpo de expresión lambda"
 };
 
 export const isToken = token => {

@@ -50,9 +50,6 @@ const test3 = () => {
         // }
 
     }
-    catch (err) {
-        // console.log(err);
-    }
 }
 const showConsoleDebugLog = debugLog => {
     console.table(debugLog.reduce((simplifiedLog, { operations, title }) => {
