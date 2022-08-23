@@ -29,7 +29,8 @@ const ExpressionCard = ({ setAnalyzedList }) => {
     const analyze = () => {
         try {
             setAnalyzedList(lexicAnalyzer(expression));
-        } catch (error) {
+        } catch (err) {
+            console.log(err);
             openModal(!isOpenModal);
         }
     };
