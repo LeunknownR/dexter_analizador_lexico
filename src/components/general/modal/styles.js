@@ -12,7 +12,6 @@ export const Container = styled.section`
     justify-content: center;
     background-color: rgba(22, 26, 29, 0.96);
     z-index: 1000;
-    transition: 0.4s;
     opacity: 0;
     visibility: hidden;
     &.open {
@@ -30,8 +29,8 @@ export const ModalWindow = styled.article`
     max-height: 60%;
     border-radius: 20px;
     gap: 20px;
-    transition: 0.4s;
     transform: translateY(-800px);
+    overflow: hidden;
     &.opened {
         transform: translateY(0);
     }
@@ -73,7 +72,7 @@ export const InfoError = styled.p`
     font-weight: 300;
     padding: 0 60px;
     margin: 0;
-    @media (max-width: 750px) {
+    @media (max-width: 826px) {
         font-size: 20px;
     }
     @media (max-height: 648.67px) {
@@ -87,9 +86,6 @@ export const ExpressionContainer = styled.div`
     justify-content: center;
     gap: 15px;
     padding: 20px 40px 50px 40px;
-    @media (max-width: 1250px) {
-        flex-direction: column;
-    }
     @media (max-height: 648.67px) {
         flex-direction: row;
         padding: 10px 30px 40px 30px;
@@ -115,11 +111,10 @@ export const ExpressionContainer = styled.div`
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        max-width: 60%;
         @media (max-width: 1250px) {
-            width: 80%;
         }
         @media (max-width: 830px) {
-            width: 80%;
         }
         @media (max-height: 648.67px) {
             font-size: 16px;
