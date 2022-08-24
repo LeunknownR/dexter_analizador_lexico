@@ -21,6 +21,11 @@ export const Container = styled.button`
         background-color: ${({ backColor = "var(--secondary-back-color)" }) => `var(${backColor})`};
         color: ${({ color = "var(--primary-color)" }) => `var(${color})`};
         outline: 1px solid ${({outline = "var(--black-xd)"}) => `var(${outline})`};
+        & div {
+            transition: 0.4s;
+            color: ${({ backColor = "var(--secondary-back-color)" }) => `var(${backColor})`};
+            background-color: ${({ color = "var(--primary-color)" }) => `var(${color})`};
+        }
     }
     &:active {
         transform: scale(0.9);
