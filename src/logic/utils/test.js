@@ -48,6 +48,5 @@ const showConsoleDebugLog = debugLog => {
         return newSimplifiedLog;
     }, []));
 }
-test3();
 
 export default test;
