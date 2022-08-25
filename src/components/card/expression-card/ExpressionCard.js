@@ -14,30 +14,35 @@ import CustomBtn from "components/general/custom-btn/CustomBtn";
 import HeaderCard from "../card-template/HeaderCard";
 import Modal from "components/general/modal/Modal";
 
-const ExpressionCard = ({ setAnalyzedList }) => {
+const ExpressionCard = ({ 
+    setAnalyzedList,
+    setRefresh
+}) => {
     const [expression, setExpression] = useState({
         value: "",
         error: "",
     });
     const [isOpenModal, openModal] = useState(false);
-
     const changeExpression = ({ target: { value } }) => {
         setExpression({
             ...expression,
             value,
         });
     };
-
     const analyze = () => {
-        try {
-            setAnalyzedList(lexicAnalyzer(expression.value));
-        } catch ({ message: error }) {
-            setExpression({
-                ...expression,
-                error,
-            });
-            openModal(prev => !prev);
-        }
+        setRefresh(true);
+        setTimeout(() => {
+            setRefresh(false);
+            try {
+                setAnalyzedList(lexicAnalyzer(expression.value));
+            } catch ({ message: error }) {
+                setExpression({
+                    ...expression,
+                    error
+                });
+                openModal(prev => !prev);
+            }
+        }, 380);
     };
 
     const clean = () => {

@@ -6,30 +6,28 @@ import CustomIcon from "components/general/custom-icon/CustomIcon";
 import MembersList from "components/members-list/MembersList";
 
 const membersNames = [
-    "Ccaico Gonzales Joseph Joel",
-    "Rivera Becerra Manuel Alejandro",
-    "Carrasco Stein Ralf Carsten",
-    "Soto Ccaccachahua Juan Maycol",
-    "Dulanto Arias Alexis Valentín",
-    "Almeyda Mateo Gianella Thalía"
+    "Rivera Becerra, Manuel Alejandro",
+    "Ccaico Gonzales, Joseph Joel",
+    "Carrasco Stein, Ralf Carsten",
+    "Soto Ccaccachahua, Juan Maycol",
+    "Dulanto Arias, Alexis Valentín",
+    "Almeyda Mateo, Gianella Thalía"
 ];
 
 const Header = ({ title, icon }) => {
     const [isShown, setIsShown] = useState(false);
-
     return (
         <Container className="standard-padd-mar">
             <h1 className="custom-title">{title}</h1>
             {icon && (
                 <span
                     onMouseEnter={() => setIsShown(true)}
-                    onMouseLeave={() => setIsShown(false)}
-                >
+                    onMouseLeave={() => setIsShown(false)}>
                     <CustomIcon icon={icon} backColor="--third-color" />
                 </span>
             )}
             {/* {isShown && <MembersList names={membersNames} isShown={isShown} />} */}
-            <MembersList names={membersNames} isShown={isShown} />
+            <MembersList names={membersNames} isShown={isShown}/>
         </Container>
     );
 };

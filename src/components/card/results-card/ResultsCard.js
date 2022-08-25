@@ -5,10 +5,12 @@ import ResultComponent from "./result-component/ResultComponent";
 import ResultCategories from "./result-categories/ResultCategories";
 import NullCard from "../null-card/NullCard";
 
-const ResultsCard = ({ componentList }) => {
+const ResultsCard = ({ 
+    componentList, refresh
+}) => {
     return (
-        <Container>
-            <HeaderCard cardName="Resultados" />
+        <Container className={refresh ? "refresh" : ""}>
+            <HeaderCard cardName="Resultados"/>
             <CardContainer>
                 {!componentList ? (
                     <NullCard
