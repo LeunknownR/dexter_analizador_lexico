@@ -7,26 +7,29 @@ import AnalysisDetail from "./analysisDetail/AnalysisDetail";
 import LexicalComponent from "./lexicalComponents/LexicalComponents";
 import HeaderCard from "../card-template/HeaderCard";
 
-const InfoCard = ({operationsList}) => {
+const InfoCard = ({
+    refresh,
+    operationsList
+}) => {
     const [tabIdx, setTabIdx] = useState(0);
-
     const getTabActive = (idx) => {
         const classList = [];
         tabIdx === idx && classList.push("active-tab");
         return classList.join(" ");
     };
-
     const getTabPropsHandler = (idx) => {
         return {
             className: getTabActive(idx),
             onClick: () => setTabIdx(idx),
         };
     };
-
-    const views = [ <AnalysisDetail operationsList={operationsList}/>, <LexicalComponent />];
-//Acordarme de cambiar los valores de este state para cuando ya esté todo skr
+    const views = [
+        <AnalysisDetail operationsList={operationsList}/>, 
+        <LexicalComponent/>
+    ];
+    //Acordarme de cambiar los valores de este state para cuando ya esté todo skr
     return (
-        <Container>
+        <Container className={refresh ? "refresh" : ""}>
             <HeaderCard cardName="Más Información" />
             <CardContainer>
                 <InfoTabs>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { animationRefresh } from "../styles";
 
 export const Container = styled.section`
     display: flex;
@@ -8,7 +9,11 @@ export const Container = styled.section`
     border-radius: 20px;
     box-shadow: 0 2px #000000;
     width: 500px;
-`
+    overflow: hidden;
+    &.refresh {
+        animation: linear ${animationRefresh} 0.25s alternate-reverse infinite;
+    }
+`;
 
 export const CardContainer = styled.article`
     display: flex;

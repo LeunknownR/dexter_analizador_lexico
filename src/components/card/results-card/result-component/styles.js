@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding: 15px 20px;
     border-radius: 5px;
     gap: 5px;
-    & div{
+    & div {
         width: 100%;
         color: #434343;
         overflow: hidden;

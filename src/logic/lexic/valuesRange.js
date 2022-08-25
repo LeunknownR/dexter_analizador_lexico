@@ -1,5 +1,5 @@
 const regex = {
-    letter: /^[a-zA-Z]$/,
+    letter: /^[a-zA-Záéíóúñ]$/,
     digit: /^[0-9]$/,
     hexDigit: /^[0-9a-fA-F]$/
 };
