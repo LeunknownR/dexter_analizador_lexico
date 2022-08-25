@@ -1,7 +1,8 @@
 export const STATES = {
     START: "start",
     INTEGER: "integer",
-    DECIMAL: "decimal",
+    DECIMAL_1: "decimal1",
+    DECIMAL_F: "decimalF",
     IDENTIFIER: "identifier",
     OPERATOR_PLUS: "operatorPlus",
     OPERATOR_SUBTRACTION: "operatorSubtraction",

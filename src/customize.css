@@ -11,7 +11,6 @@
     --barely-used-gray: #7E7E7E;
     --scrollbar-color: #8EB5F0;
     --error-color: #FF4848;
-    --error-color-2: #FF2D2D;
 }
 body.no-scroll {
     overflow-y: hidden;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
 
@@ -15,28 +15,35 @@ import HeaderCard from "../card-template/HeaderCard";
 import Modal from "components/general/modal/Modal";
 
 const ExpressionCard = ({ setAnalyzedList }) => {
-    const [expression, setExpression] = useState("");
+    const [expression, setExpression] = useState({
+        value: "",
+        error: "",
+    });
     const [isOpenModal, openModal] = useState(false);
 
-    // useEffect(() => {
-    //     console.log(expression);
-    // }, [expression]);
-
     const changeExpression = ({ target: { value } }) => {
-        setExpression(value);
+        setExpression({
+            ...expression,
+            value,
+        });
     };
 
     const analyze = () => {
         try {
-            setAnalyzedList(lexicAnalyzer(expression));
-        } catch (err) {
-            console.log(err);
-            openModal(!isOpenModal);
+            setAnalyzedList(lexicAnalyzer(expression.value));
+        } catch ({ message: error }) {
+            setExpression({
+                ...expression,
+                error,
+            });
+            openModal(prev => !prev);
         }
     };
 
     const clean = () => {
-        setExpression("");
+        setExpression({
+            value: "",
+        });
         setAnalyzedList([]);
     };
     return (
@@ -50,7 +57,7 @@ const ExpressionCard = ({ setAnalyzedList }) => {
                                 placeholder="Escribir aquí..."
                                 spellCheck="false"
                                 onChange={changeExpression}
-                                value={expression}
+                                value={expression.value}
                             />
                         </code>
                     </Content>
@@ -62,7 +69,7 @@ const ExpressionCard = ({ setAnalyzedList }) => {
                         color="--third-color"
                         backColor="--black-xd"
                         onClick={clean}
-                        disable={!expression}
+                        disable={!expression.value}
                     />
                     <CustomBtn
                         title="Analizar"
@@ -71,11 +78,15 @@ const ExpressionCard = ({ setAnalyzedList }) => {
                         backColor="--secondary-back-color"
                         onClick={analyze}
                         outline="--secondary-color"
-                        disable={!expression}
+                        disable={!expression.value}
                     />
                 </BtnContainer>
             </Container>
-            <Modal isOpen={isOpenModal} handleOpen={openModal} errorExpression={expression}/>
+            <Modal
+                isOpen={isOpenModal}
+                handleOpen={openModal}
+                errorExpression={expression.error}
+            />
         </>
     );
 };
