@@ -61,7 +61,18 @@ export const STATES = {
     COLOR_CODE_HEX_4: "colorCodeHex4",
     COLOR_CODE_HEX_RGB_DOUBLE: "colorCodeHexRGBDouble",
     COLOR_CODE_HEX_5: "colorCodeHex5",
-    COLOR_CODE_HEX_RGBA_DOUBLE: "colorCodeHexRGBADouble"
+    COLOR_CODE_HEX_RGBA_DOUBLE: "colorCodeHexRGBADouble",
+    COMMENT_ONE_LINE_F: "commentOneLineF",
+    COMMENT_MULTILINE: "commentMultiline",
+    COMMENT_MULTILINE_1: "commentMultiline1",
+    COMMENT_MULTILINE_F: "commentMultilineF",
+    CHARACTER: "caracter",
+    CHARACTER_1: "caracter1",
+    CHARACTER_F: "caracterF",
+    INDEX: "index",
+    INDEX_F: "indexF",
+    INDEX_1: "index1",
+    INDEX_2: "index2"
 };
 
 export const isColorCodeHexState = STATE => (

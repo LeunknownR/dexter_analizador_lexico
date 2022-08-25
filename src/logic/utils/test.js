@@ -17,16 +17,17 @@ const manuelExpressions = [
     "persona.nombres $= \"Manuel Alejandro\";",
     "estaBarato $= producto => producto.precio < 5;",
     "List<Product> products $= new List<Product>();",
-    "List<G1, G2> products $= new List<G1, G2>();",
+    "List<1G1, G2> products $= new List<1G1, G2>();",
     "bgcolor $= #252",
     "forecolor $= #235000",
     "var $= #1",
     "var $= #6",
+    "''"
 ]
 
 const test3 = () => {
     try {
-        const expressionIdx = 4;
+        const expressionIdx = 6;
         console.log(manuelExpressions[expressionIdx]);
         const [componentList, debugLog] = lexicAnalyzer(manuelExpressions[expressionIdx]);
         showConsoleDebugLog(debugLog);

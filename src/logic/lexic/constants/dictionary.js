@@ -43,7 +43,11 @@ export const TOKEN_DICTIONARY = {
     [STATES.COLOR_CODE_HEX_RGB_SIMPLE]: "Color hexadecimal RGB simple",
     [STATES.COLOR_CODE_HEX_RGBA_SIMPLE]: "Color hexadecimal RGBA simple",
     [STATES.COLOR_CODE_HEX_RGB_DOUBLE]: "Color hexadecimal RGB de doble digito",
-    [STATES.COLOR_CODE_HEX_RGBA_DOUBLE]: "Color hexadecimal RGBA de doble digito"
+    [STATES.COLOR_CODE_HEX_RGBA_DOUBLE]: "Color hexadecimal RGBA de doble digito",
+    [STATES.COMMENT_ONE_LINE_F]: "Comentario de una línea",
+    [STATES.CHARACTER_F]: "Caracter",
+    [STATES.INDEX_F]: "Indice",
+    [STATES.COMMENT_MULTILINE_F] : "Comentario de varias líneas"
 };
 
 export const isToken = token => {
