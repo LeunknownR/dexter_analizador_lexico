@@ -11,7 +11,8 @@ export const Container = styled.div`
         width: 100%;
         color: #434343;
         overflow: hidden;
-        word-wrap: break-word;
+        text-overflow: ellipsis;
+
         :first-child {
             font-weight: 600;
         }

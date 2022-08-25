@@ -16,7 +16,7 @@ const Operation = ({ state, charGroup, charValue }) => {
                     />
                 </div>
                 <div>
-                    <span>{state}</span>
+                    <span title={state}>{state}</span>
                 </div>
             </Content>
             <Content>
