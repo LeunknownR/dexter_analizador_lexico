@@ -112,10 +112,6 @@ export const ExpressionContainer = styled.div`
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: 60%;
-        @media (max-width: 1250px) {
-        }
-        @media (max-width: 830px) {
-        }
         @media (max-height: 648.67px) {
             font-size: 16px;
         }

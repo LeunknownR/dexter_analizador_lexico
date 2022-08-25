@@ -10,7 +10,7 @@ const AnalysisTitle = ({ token, lexeme }) => {
                 color="--secondary-color"
                 size="XS"
             />
-            <span className="custom-subtitle">{lexeme}</span>
+            <span className="custom-subtitle" title={lexeme}>{lexeme}</span>
         </Container>
     );
 };
