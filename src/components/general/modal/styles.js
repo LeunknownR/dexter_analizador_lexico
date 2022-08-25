@@ -12,6 +12,12 @@ export const Container = styled.section`
     justify-content: center;
     background-color: rgba(22, 26, 29, 0.96);
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
 `;
 export const ModalWindow = styled.article`
     display: flex;
@@ -23,6 +29,11 @@ export const ModalWindow = styled.article`
     max-height: 60%;
     border-radius: 20px;
     gap: 20px;
+    transform: translateY(-800px);
+    overflow: hidden;
+    &.opened {
+        transform: translateY(0);
+    }
     @media (max-width: 650px) {
         width: 90%;
     }
@@ -30,8 +41,20 @@ export const ModalWindow = styled.article`
 export const ExitBtnContainer = styled.div`
     position: absolute;
     cursor: pointer;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
+    & div {
+        transition: 0.4s;
+        @media (max-height: 695px) {
+            font-size: 30px !important;
+        }
+        :hover {
+            color: #ff0000;
+        }
+        :active {
+            transform: scale(0.8);
+        }
+    }
 `;
 export const ModalTitle = styled.div`
     display: flex;
@@ -49,7 +72,7 @@ export const InfoError = styled.p`
     font-weight: 300;
     padding: 0 60px;
     margin: 0;
-    @media (max-width: 750px) {
+    @media (max-width: 826px) {
         font-size: 20px;
     }
     @media (max-height: 648.67px) {
@@ -58,16 +81,14 @@ export const InfoError = styled.p`
 `;
 export const ExpressionContainer = styled.div`
     display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    justify-content: center;
     gap: 15px;
-    padding: 20px 0 50px 0;
-    @media (max-width: 1250px) {
-        flex-direction: column;
-    }
+    padding: 20px 40px 50px 40px;
     @media (max-height: 648.67px) {
         flex-direction: row;
-        padding: 10px 0 40px 0;
+        padding: 10px 30px 40px 30px;
     }
     @media (max-width: 830px) {
         flex-direction: column;
@@ -87,18 +108,13 @@ export const ExpressionContainer = styled.div`
     span {
         color: #8c8c8c;
         font-size: 23px;
-        width: 45%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        max-width: 60%;
         @media (max-width: 1250px) {
-            width: 85%;
-        }
-        @media (max-height: 648.67px) {
-            width: 50%;
         }
         @media (max-width: 830px) {
-            width: 80%;
         }
         @media (max-height: 648.67px) {
             font-size: 16px;
