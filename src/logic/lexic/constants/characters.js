@@ -19,6 +19,7 @@ export const CHARACTER_LIST = {
     GREATER_THAN: ">",
     LESS_THAN: "<",
     DOUBLE_QUOTE: "\"",
+    SINGLE_QUOTE: "'",
     BACKTICK: "`",
     PERCENTAGE: "%",
     AT: "@",
