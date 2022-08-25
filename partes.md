@@ -71,7 +71,7 @@ Cadena: "sadkkasjdkjsx_ + 2" [x]
 Cadena interpolación: @`""""sadkkasjdkjs " ''` [x]
 ### Persona 3
 
-Caracter: '2'
+Caracter: '2' [x]
 Booleano: true, false
 ### Persona 2
 Código hexadecimal de color: [x]
@@ -95,8 +95,8 @@ Genérico: <Person, string, int...> [x]
 Definidor de cuerpo de expresión lambda: => [x]
 ### Persona 3
 
-Índice: [], [0], [12323], [24, 6, 4]
-Cierre de sentencia: ;
-Comentario de una línea: // asdsadsa\n
-Comentario de varias líneas: /*sadsas*/
+Índice: [], [0], [12323], [24, 6, 4] [x]
+Cierre de sentencia: ; [x]
+Comentario de una línea: // asdsadsa\n , // [x]
+Comentario de varias líneas: /*sadsas*/ [x]
 ### Persona 2
