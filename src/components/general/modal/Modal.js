@@ -62,7 +62,9 @@ const Modal = ({ isOpen, handleOpen, errorExpression }) => {
                         />
                         <h3>Expresión desconocida:</h3>
                     </div>
-                    <span>{errorExpression}</span>
+                    <code>
+                        <span title={errorExpression}>{errorExpression.replaceAll("\n", "\\n").replaceAll(" ", "\\w")}</span>
+                    </code>
                 </ExpressionContainer>
             </ModalWindow>
         </Container>

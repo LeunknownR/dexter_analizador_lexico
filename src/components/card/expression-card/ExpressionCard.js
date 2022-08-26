@@ -29,6 +29,7 @@ const ExpressionCard = ({
             value,
         });
     };
+    console.log(expression)
     const analyze = () => {
         setRefresh(true);
         setTimeout(() => {
@@ -63,6 +64,7 @@ const ExpressionCard = ({
                                 spellCheck="false"
                                 onChange={changeExpression}
                                 value={expression.value}
+                                maxLength="10000"
                             />
                         </code>
                     </Content>

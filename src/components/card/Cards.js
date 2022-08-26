@@ -11,7 +11,7 @@ const Cards = () => {
     const [componentList, operationsList] = analyzedList;
     return (
         <Container>
-            <ExpressionCard 
+            <ExpressionCard
                 setAnalyzedList={setAnalyzedList}
                 setRefresh={setRefresh}/>
             <ResultsCard refresh={refresh} componentList={componentList}/>

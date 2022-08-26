@@ -3,6 +3,7 @@ import CustomIcon from "components/general/custom-icon/CustomIcon";
 import { Container, Content } from "./styles";
 
 const Operation = ({ state, charGroup, charValue }) => {
+    console.log(charGroup)
     return (
         <Container>
             <Content>
@@ -31,7 +32,7 @@ const Operation = ({ state, charGroup, charValue }) => {
                     <span>
                         {charGroup}{" "}
                     </span>
-                    <span className="custom-purple-subtitle">{charValue}</span>
+                    <span className="custom-purple-subtitle">{charValue.replaceAll("\n", "\\n").replaceAll(" ", "\\w")}</span>
                 </div>
             </Content>
         </Container>

@@ -68,7 +68,7 @@ export const ModalHr = styled.hr`
 `;
 export const InfoError = styled.p`
     font-size: 24px;
-    color: #9e9c9c;
+    color: #828282;
     font-weight: 300;
     padding: 0 60px;
     margin: 0;
