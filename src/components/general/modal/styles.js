@@ -14,6 +14,7 @@ export const Container = styled.section`
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
+    transition: 0.2s;
     &.open {
         opacity: 1;
         visibility: visible;
@@ -31,6 +32,7 @@ export const ModalWindow = styled.article`
     gap: 20px;
     transform: translateY(-800px);
     overflow: hidden;
+    transition: 0.3s;
     &.opened {
         transform: translateY(0);
     }

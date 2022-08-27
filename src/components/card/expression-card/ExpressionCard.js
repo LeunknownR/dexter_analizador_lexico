@@ -29,7 +29,6 @@ const ExpressionCard = ({
             value,
         });
     };
-    console.log(expression)
     const analyze = () => {
         setRefresh(true);
         setTimeout(() => {

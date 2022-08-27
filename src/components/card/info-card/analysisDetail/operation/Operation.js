@@ -1,4 +1,5 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
+import { showSpacesAndLinebreaks } from "utils/showSpacesAndLinebreaks";
 
 import { Container, Content } from "./styles";
 
@@ -32,7 +33,7 @@ const Operation = ({ state, charGroup, charValue }) => {
                     <span>
                         {charGroup}{" "}
                     </span>
-                    <span className="custom-purple-subtitle">{charValue.replaceAll("\n", "\\n").replaceAll(" ", "\\w")}</span>
+                    <span className="custom-purple-subtitle">{showSpacesAndLinebreaks(charValue)}</span>
                 </div>
             </Content>
         </Container>
