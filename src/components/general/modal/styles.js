@@ -14,6 +14,7 @@ export const Container = styled.section`
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
+    transition: 0.2s;
     &.open {
         opacity: 1;
         visibility: visible;
@@ -31,6 +32,7 @@ export const ModalWindow = styled.article`
     gap: 20px;
     transform: translateY(-800px);
     overflow: hidden;
+    transition: 0.3s;
     &.opened {
         transform: translateY(0);
     }
@@ -68,7 +70,7 @@ export const ModalHr = styled.hr`
 `;
 export const InfoError = styled.p`
     font-size: 24px;
-    color: #9e9c9c;
+    color: #828282;
     font-weight: 300;
     padding: 0 60px;
     margin: 0;

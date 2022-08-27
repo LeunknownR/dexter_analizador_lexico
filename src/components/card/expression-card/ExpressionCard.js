@@ -63,6 +63,7 @@ const ExpressionCard = ({
                                 spellCheck="false"
                                 onChange={changeExpression}
                                 value={expression.value}
+                                maxLength="10000"
                             />
                         </code>
                     </Content>

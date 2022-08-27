@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { showSpacesAndLinebreaks } from "utils/showSpacesAndLinebreaks";
 
 import CustomIcon from "../custom-icon/CustomIcon";
 
@@ -62,7 +63,9 @@ const Modal = ({ isOpen, handleOpen, errorExpression }) => {
                         />
                         <h3>Expresión desconocida:</h3>
                     </div>
-                    <span>{errorExpression}</span>
+                    <code>
+                        <span title={errorExpression}>{showSpacesAndLinebreaks(errorExpression)}</span>
+                    </code>
                 </ExpressionContainer>
             </ModalWindow>
         </Container>
