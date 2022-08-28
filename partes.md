@@ -63,8 +63,8 @@ Operador mayor o igual que: >= [x]
 
 # Literales (7 componentes)
 
-Decimal: 1.7, 0.35, (-2.7)
-Entero: 96, 0, (-120)
+Decimal: 1.7, 0.35, -2.7 [x]
+Entero: 96, 0, -120 [x]
 ### Persona 1
 
 Cadena: "sadkkasjdkjsx_ + 2" [x]
@@ -72,7 +72,7 @@ Cadena interpolación: @`""""sadkkasjdkjs " ''` [x]
 ### Persona 3
 
 Caracter: '2' [x]
-Booleano: true, false
+Booleano: true, false [x]
 ### Persona 2
 Código hexadecimal de color: [x]
 #023 =>  Color hexadecimal RGB simple
