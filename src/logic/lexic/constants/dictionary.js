@@ -47,7 +47,8 @@ export const TOKEN_DICTIONARY = {
     [STATES.COMMENT_ONE_LINE_F]: "Comentario de una línea",
     [STATES.CHARACTER_F]: "Caracter",
     [STATES.INDEX_F]: "Indice",
-    [STATES.COMMENT_MULTILINE_F] : "Comentario de varias líneas"
+    [STATES.COMMENT_MULTILINE_F] : "Comentario de varias líneas",
+    [STATES.BOOLEAN]: "Booleano"
 };
 
 export const isToken = token => {

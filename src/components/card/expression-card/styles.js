@@ -22,17 +22,17 @@ export const Content = styled.div`
     code {
         height: 100%;
     }
-    &:after {
+    &::after {
         content: "";
-        border-top: 20px solid var(--secondary-color);
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        transform: rotate(-45deg);
+        border-radius: 30px;
+        border: 20px solid var(--secondary-color-2);
+        border-bottom: 20px dashed var(--secondary-color-2);
+        border-right: 20px dashed var(--secondary-color-2);
         z-index: 1;
         opacity: 0.9;
         position: absolute;
-        right: -14px;
-        bottom: -5px;
+        right: -25px;
+        bottom: -25px;
         pointer-events: none;
     }
 `;

@@ -72,7 +72,8 @@ export const STATES = {
     INDEX: "index",
     INDEX_F: "indexF",
     INDEX_1: "index1",
-    INDEX_2: "index2"
+    INDEX_2: "index2",
+    BOOLEAN: "boolean"
 };
 
 export const isColorCodeHexState = STATE => (
