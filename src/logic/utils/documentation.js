@@ -20,7 +20,7 @@ const documentation = [
                 lexeme: CHARACTER_LIST.HYPHEN,
             },
             {
-                description: "Operador producto",
+                description: "Operador productos",
                 lexeme: CHARACTER_LIST.ASTERISK,
             },
             {
