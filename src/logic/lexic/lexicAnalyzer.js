@@ -3,7 +3,7 @@ import { isToken, TOKEN_DICTIONARY } from "./constants/dictionary";
 import { CHARACTER_LIST } from "./constants/characters";
 import { RecognizerValuesRange } from "./valuesRange";
 import { isColorCodeHexState, STATES } from "./constants/states";
-import { isReservedWord } from "./constants/reservedWords";
+import { isReservedWord, whatReservedWordTypeIs } from "./constants/reservedWords";
 
 const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
 
@@ -23,14 +23,16 @@ const lexicAnalyzer = input => {
     //#region Functions
     const checkIsReservedWord = newComponent => {
         // Verificando si no cumple con ser una palabra reservada
-        if (![STATES.IDENTIFIER, undefined].includes(currentState) 
-            || !isReservedWord(currentLexeme)) return;
+        if (![STATES.IDENTIFIER, undefined].includes(currentState))
+            return;
+        const STATE = whatReservedWordTypeIs(currentLexeme);
+        if (!STATE) return;
         // Reportando componente encontrado
-        const tokenName = TOKEN_DICTIONARY[STATES.RESERVED_WORD];
+        const tokenName = TOKEN_DICTIONARY[STATE];
         addTitleToDebugLog({
             lexeme: currentLexeme,
             token: tokenName
-        }, true);
+        }, STATE);
         // Setteando valores de ser una palabra reservada
         newComponent.token = {
             key: STATES.RESERVED_WORD,
@@ -38,12 +40,12 @@ const lexicAnalyzer = input => {
         };
         newComponent.lexeme = currentLexeme;
     }
-    const addTitleToDebugLog = (title, isReservedWord = false) => {
+    const addTitleToDebugLog = (title, reservedWordType = null) => {
         // Reportando componente encontrado
         debugLog[debugLog.length - 1] = {
             ...debugLog[debugLog.length-1],
             title,
-            isReservedWord
+            reservedWordType
         };
     }
     const addToComponentList = () => {

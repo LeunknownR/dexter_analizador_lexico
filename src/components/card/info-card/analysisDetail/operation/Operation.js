@@ -4,7 +4,6 @@ import { showSpacesAndLinebreaks } from "utils/showSpacesAndLinebreaks";
 import { Container, Content } from "./styles";
 
 const Operation = ({ state, charGroup, charValue }) => {
-    console.log(charGroup)
     return (
         <Container>
             <Content>

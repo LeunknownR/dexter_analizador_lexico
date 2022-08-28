@@ -1,7 +1,9 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
 import { Container } from "./styles";
 
-const ReservedWordIdentifier = () => {
+const ReservedWordIdentifier = ({
+    caption
+}) => {
     return (
         <Container>
             <CustomIcon
@@ -10,7 +12,7 @@ const ReservedWordIdentifier = () => {
                 size="XS"
                 rotate="2"
             />
-            <span>IDENTIFICADOR DENTRO DE PALABRAS RESERVADAS</span>
+            <span>{caption}</span>
         </Container>
     );
 };

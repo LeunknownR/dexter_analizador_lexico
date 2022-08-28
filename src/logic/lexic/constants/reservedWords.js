@@ -1,3 +1,11 @@
+import { STATES } from "./states";
+
+export const LITERALS = {
+    BOOLEAN: {
+        TRUE: "true",
+        FALSE: "false"
+    }
+};
 export const RESERVED_WORDS = {
     IF: "if",
     ELSE: "else",
@@ -17,4 +25,14 @@ export const RESERVED_WORDS = {
     NEW: "new",
     BREAK: "break"
 };
-export const isReservedWord = lexeme => Object.values(RESERVED_WORDS).includes(lexeme);
+const checkCollection = (COLLECTION, lexeme) => {
+    return Object.values(COLLECTION).includes(lexeme);
+}
+
+export const whatReservedWordTypeIs = lexeme => {
+    if (checkCollection(RESERVED_WORDS, lexeme))
+        return STATES.RESERVED_WORD;
+    if (checkCollection(LITERALS.BOOLEAN, lexeme))
+        return STATES.BOOLEAN;
+    return null;
+}

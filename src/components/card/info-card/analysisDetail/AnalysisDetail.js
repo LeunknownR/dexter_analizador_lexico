@@ -14,10 +14,10 @@ const AnalysisDetail = ({ operationsList }) => {
             />
             ) : (
                 operationsList
-                ?.map(({isReservedWord, operations, title: { token, lexeme }},idx) => {
+                ?.map(({ reservedWordType, operations, title: { token, lexeme }},idx) => {
                         return (
                             <OperationComponent
-                                isReservedWord={isReservedWord}
+                                reservedWordType={reservedWordType}
                                 operations={operations}
                                 token={token}
                                 lexeme={lexeme}
