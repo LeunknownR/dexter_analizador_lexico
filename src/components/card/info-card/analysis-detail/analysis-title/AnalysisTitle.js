@@ -7,7 +7,7 @@ const AnalysisTitle = ({ token, lexeme }) => {
             <h3>{token.toUpperCase()}</h3>
             <CustomIcon
                 icon="bxs:right-arrow"
-                color="--secondary-color"
+                color="var(--secondary-color)"
                 size="XS"
             />
             <span className="custom-subtitle" title={lexeme}>{lexeme}</span>

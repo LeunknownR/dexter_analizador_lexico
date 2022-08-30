@@ -4,8 +4,8 @@ export const Container = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${({ backColor = 'var(--primary-color)' }) => `var(${backColor})`};
-    background-color: ${({ color = 'var(--secondary-back-color)' }) => `var(${color})`};
+    color: ${({ backColor = 'var(--primary-color)' }) => backColor};
+    background-color: ${({ color = 'var(--secondary-back-color)' }) => color};
     border: none;
     outline: none;
     border-radius: 15px;
@@ -18,13 +18,13 @@ export const Container = styled.button`
     user-select: none;
     transition: 0.3s;
     &:hover {
-        background-color: ${({ backColor = "var(--secondary-back-color)" }) => `var(${backColor})`};
-        color: ${({ color = "var(--primary-color)" }) => `var(${color})`};
-        outline: 1px solid ${({outline = "var(--black-xd)"}) => `var(${outline})`};
+        background-color: ${({ backColor = "var(--secondary-back-color)" }) => backColor};
+        color: ${({ color = "var(--primary-color)" }) => color};
+        outline: 1px solid ${({outline = "var(--black-xd)"}) => outline};
         & div {
             transition: 0.4s;
-            color: ${({ backColor = "var(--secondary-back-color)" }) => `var(${backColor})`};
-            background-color: ${({ color = "var(--primary-color)" }) => `var(${color})`};
+            color: ${({ backColor = "var(--secondary-back-color)" }) => backColor};
+            background-color: ${({ color = "var(--primary-color)" }) => color};
         }
     }
     &:active {

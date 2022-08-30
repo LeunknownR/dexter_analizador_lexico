@@ -33,7 +33,7 @@ const Modal = ({ isOpen, handleOpen, errorExpression }) => {
                 <ExitBtnContainer onClick={() => handleOpen(false)}>
                     <CustomIcon
                         icon="eva:close-outline"
-                        color="--error-color"
+                        color="var(--error-color)"
                         padding="0"
                         size="L"
                     />
@@ -41,7 +41,7 @@ const Modal = ({ isOpen, handleOpen, errorExpression }) => {
                 <ModalTitle>
                     <CustomIcon
                         icon="el:error"
-                        color="--error-color"
+                        color="var(--error-color)"
                         size="M"
                         padding="0"
                     />
@@ -57,7 +57,7 @@ const Modal = ({ isOpen, handleOpen, errorExpression }) => {
                     <div>
                         <CustomIcon
                             icon="el:error"
-                            color="--secondary-color-2"
+                            color="var(--secondary-color-2)"
                             size="S"
                             padding="0"
                         />

@@ -9,6 +9,7 @@
     --secondary-back-color: #FFFFFF;
     --black-xd: #000000;
     --barely-used-gray: #7E7E7E;
+    --barely-used-gray-2: #ADADAD;
     --scrollbar-color: #8EB5F0;
     --error-color: #FF4848;
 }
@@ -31,6 +32,12 @@ body.no-scroll {
 .custom-title-3 {
     font-size: 20px;
     font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.custom-title-4 {
+    font-size: 20px;
+    font-weight: 600;
     margin: 0;
     padding: 0;
 }

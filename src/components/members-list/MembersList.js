@@ -37,7 +37,7 @@ const MemberCard = ({
         <MemberContainer className={className} delayFactor={delayFactor}>
             <CustomIcon
                 icon="charm:person"
-                color="--barely-used-gray"
+                color="var(--barely-used-gray)"
                 size="M"/>
             <span>{name}</span>
         </MemberContainer>

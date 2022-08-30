@@ -15,9 +15,9 @@ const SubHeader = ({ title, subtitle, img }) => {
             </Content>
             <Ornament
                 colors={[
-                    "--primary-color",
-                    "--secondary-color",
-                    "--third-color",
+                    "var(--primary-color)",
+                    "var(--secondary-color)",
+                    "var(--third-color)",
                 ]}
             />
         </Container>

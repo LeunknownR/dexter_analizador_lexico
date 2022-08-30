@@ -72,18 +72,18 @@ const ExpressionCard = ({
                     <CustomBtn
                         title="Limpiar"
                         icon="heroicons-solid:trash"
-                        color="--third-color"
-                        backColor="--black-xd"
+                        color="var(--third-color)"
+                        backColor="var(--black-xd)"
                         onClick={clean}
                         disable={!expression.value}
                     />
                     <CustomBtn
                         title="Analizar"
                         icon="arcticons:audio-spectrum-analyzer"
-                        color="--secondary-color"
-                        backColor="--secondary-back-color"
+                        color="var(--secondary-color)"
+                        backColor="var(--secondary-back-color)"
                         onClick={analyze}
-                        outline="--secondary-color"
+                        outline="var(--secondary-color)"
                         disable={!expression.value}
                     />
                 </BtnContainer>

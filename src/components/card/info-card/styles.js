@@ -81,7 +81,7 @@ export const Tab = styled.div`
         width: 45%;
     }
 `;
-export const InfoBody = styled.div`
+export const InfoBody = styled.article`
     display: flex;
     height: 100%;
     width: 100%;

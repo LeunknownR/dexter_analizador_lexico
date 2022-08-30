@@ -295,7 +295,7 @@ const documentation = [
                     `<${CHARACTER_LIST.DIGIT}>`,
                     CHARACTER_LIST.COMMA,
                     `<${CHARACTER_LIST.DIGIT}>`,
-                    CHARACTER_LIST.COMMA
+                    CHARACTER_LIST.COMMA,
                     `<${CHARACTER_LIST.DIGIT}>`,
                     CHARACTER_LIST.END_BRACKET
                 ])
