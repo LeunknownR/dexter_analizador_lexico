@@ -1,27 +1,26 @@
 import { Container } from "./styles";
-import ReservedWordsList from "../reserved-words-list/ReservedWordsList";
-import LexemesList from "../lexemes-list/LexemesList";
+import ReservedWordListItem from "../reserved-words-list-item/ReservedWordListItem";
+import LexemesListItem from "../lexemes-list/LexemesList";
 
-const ListContainer = ({display, words, components}) => {
-    return (
-        <Container>
-            {display === "Palabras reservadas"
-                        ? words.map((word, idx) => (
-                              <ReservedWordsList
-                                  word={word}
-                                  key={idx}
-                                  className="reserved-word"
-                              />
-                          ))
-                        : components?.map(({ description, lexeme }, idx) => (
-                              <LexemesList
-                                  description={description}
-                                  lexeme={lexeme}
-                                  key={idx}
-                              />
-                          ))}
-        </Container>
-    );
+const ListContainer = ({ words, components }) => {
+    return words
+    ? <Container direction="row">
+        {words.map((word, idx) => 
+            <ReservedWordListItem
+                key={idx}
+                className="reserved-word"
+                word={word}/>)}
+    </Container>
+    : <Container>
+        {components?.map(({ description, lexeme }, idx) => {
+            return (
+                <LexemesListItem
+                    key={idx}
+                    description={description}
+                    lexeme={lexeme}/>
+            );
+        })}
+    </Container>
 };
 
 export default ListContainer;

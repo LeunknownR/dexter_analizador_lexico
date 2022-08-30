@@ -1,17 +1,17 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
-import { Container, LexicComponentContainer } from "./styles";
+import { Container } from "./styles";
 
-
-const LexemesList = ({description, lexeme}) => {
+const LexemesListItem = ({ description, lexeme }) => {
     return (
         <Container>
-            <LexicComponentContainer>
-                <CustomIcon icon="gg:components" color="var(--barely-used-gray)" size="XS"/>
-                <h5>{description}</h5>
-                <span>{lexeme}</span>
-            </LexicComponentContainer>
+            <CustomIcon 
+                icon="gg:components" 
+                color="var(--barely-used-gray)" 
+                size="XS" />
+            <h5>{description}</h5>
+            <span title={lexeme}>{lexeme}</span>
         </Container>
     );
 };
 
-export default LexemesList;
+export default LexemesListItem;

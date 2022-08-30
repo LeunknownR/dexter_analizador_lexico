@@ -15,3 +15,9 @@ export const Container = styled.header`
         text-overflow: ellipsis;
     }
 `;
+export const LexemeText = styled.div`
+    font-family: "Fira Code";
+    font-weight: bold;
+    color: var(--gray);
+    font-size: 18px;
+`;

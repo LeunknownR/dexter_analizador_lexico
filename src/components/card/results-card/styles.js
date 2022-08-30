@@ -32,12 +32,13 @@ export const CardContainer = styled.article`
 export const ResultComponents = styled.div`
     display: flex;
     flex-direction: column;
+    font-family: "Fira Code";
     width: 85%;
     margin-top: 20px;
     gap: 10px;
     overflow-y: scroll;
     ::-webkit-scrollbar {
-        background: null;
+        background: unset;
         width: 10px;
     }
     ::-webkit-scrollbar-thumb {
