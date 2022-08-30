@@ -21,7 +21,7 @@ const App = () => {
             <main>
                 <Cards/>
             </main>
-            <Footer team="GROUP 3" />
+            <Footer team="GROUP 1 - VIC - COMPILADORES" />
         </>
     );
 };
