@@ -9,6 +9,6 @@ export const Container = styled.div`
 export const Dot = styled.div`
     width: 15px;
     height: 15px;
-    background-color: ${({ color }) => (color ? `var(${color})` : null)};
+    background-color: ${({ color }) => (color ? color : "unset")};
     border-radius: 50%;
 `;

@@ -8,7 +8,7 @@ const ReservedWordIdentifier = ({
         <Container>
             <CustomIcon
                 icon="mdi:pentagram"
-                color="--secondary-color"
+                color="var(--secondary-color)"
                 size="XS"
                 rotate="2"
             />

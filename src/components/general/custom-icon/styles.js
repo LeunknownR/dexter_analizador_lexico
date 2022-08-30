@@ -5,8 +5,8 @@ export const Container = styled.div`
     align-items: center;
     border-radius: 50%;
     padding: ${({ padding = "8px" }) => padding};
-    background-color: ${({ backColor }) => (backColor ? `var(${backColor})` : "unset")};
-    color: ${({ color }) => (color ? `var(${color})` : "#000000")};
+    background-color: ${({ backColor }) => (backColor ? backColor : "unset")};
+    color: ${({ color }) => (color ? color : "#000000")};
     &.icon {
         font-size: 35px;
     }

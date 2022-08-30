@@ -7,8 +7,8 @@ const OperationType = ({newState}) => {
         <Container>
             <CustomIcon
                 icon="bi:arrow-right"
-                color="--secondary-back-color"
-                backColor={newState === "error" ? "--error-color" : "--black-xd"}
+                color="var(--secondary-back-color)"
+                backColor={newState === "error" ? "var(--error-color)" : "var(--black-xd)"}
                 size="XS"
             />
             <NewState color={newState === "error" ? "var(--error-color)" : "var(--black-xd)"} title={newState}>{newState}</NewState>

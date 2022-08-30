@@ -23,7 +23,7 @@ const Header = ({ title, icon }) => {
                 <span
                     onMouseEnter={() => setIsShown(true)}
                     onMouseLeave={() => setIsShown(false)}>
-                    <CustomIcon icon={icon} backColor="--third-color" />
+                    <CustomIcon icon={icon} backColor="var(--third-color)" />
                 </span>
             )}
             {/* {isShown && <MembersList names={membersNames} isShown={isShown} />} */}

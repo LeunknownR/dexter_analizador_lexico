@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Container, CardContainer, InfoTabs, Tab, InfoBody } from "./styles";
 
 import CustomIcon from "components/general/custom-icon/CustomIcon";
-import AnalysisDetail from "./analysisDetail/AnalysisDetail";
-import LexicalComponent from "./lexicalComponents/LexicalComponents";
+import AnalysisDetail from "./analysis-detail/AnalysisDetail";
+import LexicalComponent from "./lexical-components/LexicalComponents";
 import HeaderCard from "../card-template/HeaderCard";
 
 const InfoCard = ({
@@ -24,8 +24,8 @@ const InfoCard = ({
         };
     };
     const views = [
-        <AnalysisDetail operationsList={operationsList}/>, 
-        <LexicalComponent/>
+        <LexicalComponent/>,
+        <AnalysisDetail operationsList={operationsList}/>
     ];
     //Acordarme de cambiar los valores de este state para cuando ya esté todo skr
     return (
@@ -33,11 +33,11 @@ const InfoCard = ({
             <HeaderCard cardName="Más Información" />
             <CardContainer>
                 <InfoTabs>
-                    <Tab {...getTabPropsHandler(1)}>
+                    <Tab {...getTabPropsHandler(0)}>
                         <CustomIcon icon="ep:notebook" />
                         <h5>Componentes Léxicos</h5>
                     </Tab>
-                    <Tab {...getTabPropsHandler(0)}>
+                    <Tab {...getTabPropsHandler(1)}>
                         <CustomIcon icon="ant-design:file-search-outlined" />
                         <h5>Detalle del Análisis</h5>
                     </Tab>

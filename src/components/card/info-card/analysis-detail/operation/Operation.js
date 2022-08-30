@@ -10,8 +10,8 @@ const Operation = ({ state, charGroup, charValue }) => {
                 <div>
                     <CustomIcon
                         icon="ic:outline-keyboard-arrow-right"
-                        color="--primary-color"
-                        backColor="--third-color"
+                        color="var(--primary-color)"
+                        backColor="var(--third-color)"
                         size="XS"
                         padding="3px"
                     />
@@ -24,7 +24,7 @@ const Operation = ({ state, charGroup, charValue }) => {
                 <div>
                     <CustomIcon
                         icon="bi:arrow-down-up"
-                        color="--secondary-color"
+                        color="var(--secondary-color)"
                         size="XS"
                     />
                 </div>
