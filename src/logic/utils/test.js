@@ -1,4 +1,3 @@
-import documentation from "logic/utils/documentation";
 import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
 
 const test = () => {

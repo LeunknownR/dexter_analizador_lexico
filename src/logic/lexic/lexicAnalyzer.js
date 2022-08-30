@@ -1,9 +1,9 @@
 import { TRANSITION_DIAGRAM } from "./constants/transitionDiagram";
-import { isToken, TOKEN_DICTIONARY } from "./constants/dictionary";
+import { isToken, TOKEN_DICTIONARY } from "./constants/tokens";
 import { CHARACTER_LIST } from "./constants/characters";
 import { RecognizerValuesRange } from "./valuesRange";
 import { isColorCodeHexState, STATES } from "./constants/states";
-import { isReservedWord, whatReservedWordTypeIs } from "./constants/reservedWords";
+import { whatReservedWordTypeIs } from "./constants/reservedWords";
 
 const ignoreCharacters = ch => [CHARACTER_LIST.WHITE_SPACE, CHARACTER_LIST.LINE_BREAK].includes(ch);
 

@@ -30,7 +30,6 @@ const OperationComponent = ({ token, lexeme, operations, reservedWordType }) => 
     );
 };
 
-export default OperationComponent;
 
 const OperationRow = ({ state, group, value, newState }) => {
     return (
@@ -40,3 +39,5 @@ const OperationRow = ({ state, group, value, newState }) => {
         </RowContainer>
     );
 };
+
+export default OperationComponent;

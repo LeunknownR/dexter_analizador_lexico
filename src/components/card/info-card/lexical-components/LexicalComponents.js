@@ -8,10 +8,10 @@ const LexicalComponents = () => {
         <Container>
             {documentation?.map(({ subtitle, words, components }, idx) => (
                 <LexicalCategory
+                    key={idx}
                     subtitle={subtitle}
                     words={words}
                     components={components}
-                    key={idx}
                 />
             ))}
         </Container>

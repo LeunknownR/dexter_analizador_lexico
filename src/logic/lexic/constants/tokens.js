@@ -46,7 +46,7 @@ export const TOKEN_DICTIONARY = {
     [STATES.COLOR_CODE_HEX_RGBA_DOUBLE]: "Color hexadecimal RGBA de doble digito",
     [STATES.COMMENT_ONE_LINE_F]: "Comentario de una línea",
     [STATES.CHARACTER_F]: "Caracter",
-    [STATES.INDEX_F]: "Indice",
+    [STATES.INDEX_F]: "Índice",
     [STATES.COMMENT_MULTILINE_F] : "Comentario de varias líneas",
     [STATES.BOOLEAN]: "Booleano"
 };

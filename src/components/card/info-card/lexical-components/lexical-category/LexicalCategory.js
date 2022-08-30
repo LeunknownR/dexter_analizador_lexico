@@ -7,7 +7,6 @@ const LexicalCategory = ({ subtitle, words, components }) => {
     const [isOpenContainer, openContainer] = useState(false);
     const handleOpenContainer = () => {
         openContainer((prev) => !prev);
-        console.log(words);
     };
     return (
         <>
@@ -25,29 +24,22 @@ const LexicalCategory = ({ subtitle, words, components }) => {
                         )}
                     </Content>
                     <Content>
-                        {/*Acá una clase nms bastaría tmr*/}
-                        {isOpenContainer ? (
-                            <CustomIcon
-                                icon="eva:arrow-ios-downward-outline"
-                                rotate="2"
-                                color="var(--secondary-color)"
-                            />
-                        ) : (
-                            <CustomIcon
-                                icon="eva:arrow-ios-downward-outline"
-                                color="var(--barely-used-gray-2)"
-                            />
-                        )}
+                        {isOpenContainer 
+                        ? <CustomIcon
+                            icon="eva:arrow-ios-downward-outline"
+                            rotate="2"
+                            color="var(--secondary-color)" />
+                        : <CustomIcon
+                            icon="eva:arrow-ios-downward-outline"
+                            color="var(--barely-used-gray-2)" />}
                     </Content>
                 </RowContent>
             </RowContainer>
-            {isOpenContainer && (
-                <ListContainer
-                    display={subtitle}
-                    words={words}
-                    components={components}
-                />
-            )}
+            {isOpenContainer && 
+            <ListContainer
+                words={words}
+                components={components}
+            />}
         </>
     );
 };

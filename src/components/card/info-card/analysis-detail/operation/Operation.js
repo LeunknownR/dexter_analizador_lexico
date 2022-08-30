@@ -1,7 +1,7 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
 import { showSpacesAndLinebreaks } from "utils/showSpacesAndLinebreaks";
 
-import { Container, Content } from "./styles";
+import { Container, Content, CharText } from "./styles";
 
 const Operation = ({ state, charGroup, charValue }) => {
     return (
@@ -32,7 +32,7 @@ const Operation = ({ state, charGroup, charValue }) => {
                     <span>
                         {charGroup}{" "}
                     </span>
-                    <span className="custom-purple-subtitle">{showSpacesAndLinebreaks(charValue)}</span>
+                    <CharText className="custom-purple-subtitle">{showSpacesAndLinebreaks(charValue)}</CharText>
                 </div>
             </Content>
         </Container>

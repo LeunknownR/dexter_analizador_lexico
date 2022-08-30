@@ -1,5 +1,7 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
-import { Container } from "./styles";
+import { 
+    Container, 
+    LexemeText } from "./styles";
 
 const AnalysisTitle = ({ token, lexeme }) => {
     return (
@@ -10,7 +12,7 @@ const AnalysisTitle = ({ token, lexeme }) => {
                 color="var(--secondary-color)"
                 size="XS"
             />
-            <span className="custom-subtitle" title={lexeme}>{lexeme}</span>
+            <LexemeText title={lexeme}>{lexeme}</LexemeText>
         </Container>
     );
 };

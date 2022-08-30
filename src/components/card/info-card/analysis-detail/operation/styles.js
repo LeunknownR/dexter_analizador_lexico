@@ -19,3 +19,6 @@ export const Content = styled.div`
         text-overflow: ellipsis;
     }
 `;
+export const CharText = styled.span`
+    font-family: "Fira Code";
+`;
