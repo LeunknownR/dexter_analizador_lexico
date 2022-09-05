@@ -34,6 +34,7 @@ const ExpressionCard = ({
         setTimeout(() => {
             setRefresh(false);
             try {
+                console.log(lexicAnalyzer(expression.value));
                 setAnalyzedList(lexicAnalyzer(expression.value));
             } catch ({ message: error }) {
                 setExpression({
