@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
+import lexicAnalyzer from "core/lexic/lexicAnalyzer";
 
 import {
     Container,

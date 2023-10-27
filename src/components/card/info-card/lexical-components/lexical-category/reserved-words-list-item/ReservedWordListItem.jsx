@@ -1,5 +1,5 @@
 import CustomIcon from "components/general/custom-icon/CustomIcon";
-import { Container, ReservedWordItem } from "./styles";
+import { Container } from "./styles";
 
 const ReservedWordsList = ({ word }) => {
     return (

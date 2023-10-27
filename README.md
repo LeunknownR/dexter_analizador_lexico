@@ -1,14 +1,8 @@
-# **Dexter - Analizador léxico**
+# React + Vite
 
-Un analizador léxico para el curso de Compiladores, ciclo VIC - Ing. de sistemas.
-Desarrollado como React JS y diseñado a nivel de UI en Figma.
-[Ver prototipado](https://www.figma.com/file/7FKICMJcc4e9TAMgSJKzwV/Lexical-Analizer?node-id=0%3A1)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### **Integrantes del grupo**
+Currently, two official plugins are available:
 
-* Rivera Becerra, Manuel
-* Carrasco Stein, Ralf
-* Soto Ccaccachahua, Maycol
-* Almeyda Mateo, Gianella
-* Ccaico Gonzales, Joel
-* Dulanto Arias, Alexis
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

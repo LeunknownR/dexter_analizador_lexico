@@ -7,7 +7,6 @@ import Footer from "components/footer/Footer";
 import Cards from "components/card/Cards";
 
 import Dexter from "img/DexterLogo.png";
-import test from "logic/utils/test";
 
 const App = () => {
     return (
@@ -21,7 +20,7 @@ const App = () => {
             <main>
                 <Cards/>
             </main>
-            <Footer team="GROUP 3" />
+            <Footer team="GROUP 1 - VIC - COMPILADORES" />
         </>
     );
 };
