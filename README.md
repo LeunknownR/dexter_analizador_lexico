@@ -1,8 +1,46 @@
-# React + Vite
+# **Dexter - Analizador léxico**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un analizador léxico para el curso de Compiladores de VI ciclo de la carrera de Ing. de sistemas.
+Desarrollado como React JS y diseñado a nivel de UI en Figma.
+[Ver prototipado](https://www.figma.com/file/7FKICMJcc4e9TAMgSJKzwV/Lexical-Analizer?node-id=0%3A1)
 
-Currently, two official plugins are available:
+## Integrantes del grupo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Rivera Becerra, Manuel
+-   Carrasco Stein, Ralf
+-   Soto Ccaccachahua, Maycol
+-   Almeyda Mateo, Gianella
+-   Ccaico Gonzales, Joel
+-   Dulanto Arias, Alexis
+
+## Instrucciones
+
+1.  Instalar dependencias:
+
+```powershell
+npm i
+```
+
+2.  Correr en desarrollo:
+
+```powershell
+npm run dev
+```
+
+## Herramientas
+
+-   Empaquetador vite.
+-   React JS.
+-   styled-components.
+-   iconify.
+
+## Screenshoots
+
+<div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap" align="center">
+    <img src="./docs/screenshoots/screenshoot_1.png" style="width: 75%;"/>
+    <img src="./docs/screenshoots/screenshoot_2.png" style="width: 75%;"/>
+    <img src="./docs/screenshoots/screenshoot_3.png" style="width: 75%;"/>
+    <img src="./docs/screenshoots/screenshoot_4.png" style="width: 75%;"/>
+    <img src="./docs/screenshoots/screenshoot_5.png" style="width: 75%;"/>
+    <img src="./docs/screenshoots/screenshoot_6.png" style="width: 75%;"/>
+</div>
