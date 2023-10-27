@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import lexicAnalyzer from "logic/lexic/lexicAnalyzer";
+import lexicAnalyzer from "core/lexic/lexicAnalyzer";
 
 import {
     Container,
@@ -34,7 +34,6 @@ const ExpressionCard = ({
         setTimeout(() => {
             setRefresh(false);
             try {
-                console.log(lexicAnalyzer(expression.value));
                 setAnalyzedList(lexicAnalyzer(expression.value));
             } catch ({ message: error }) {
                 setExpression({

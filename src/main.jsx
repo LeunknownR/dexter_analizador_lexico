@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
 import "./normalize.css";
+import "./customize.css";
 import "./index.css";
-import App from 'App';
 
 import './fonts/Roboto-Black.ttf';
 import './fonts/Roboto-Bold.ttf';
@@ -12,8 +12,6 @@ import './fonts/Roboto-Regular.ttf';
 import './fonts/Roboto-Thin.ttf';
 import './fonts/Fira-Code-Regular.ttf';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App/>
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <App />,
+)
